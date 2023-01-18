@@ -1,0 +1,13 @@
+.title {
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &:first-letter {
+        color: $clr-black;
+    }
+
+    &--level-1 {
+        font-size: 110px;
+        line-height: .95;
+    }
+}

@@ -1,0 +1,9 @@
+@font-face {
+	font-family: "Arkipelago";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Arkipelago "),
+		url("../../files/fonts/roboto.woff2") format("woff2"),
+		url("../../files/fonts/roboto.woff") format("woff");
+	font-display: swap;
+}

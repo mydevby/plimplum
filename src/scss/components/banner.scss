@@ -1,0 +1,20 @@
+.banner {
+    padding-top: 83px;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        padding-left: 75px;
+    }
+
+    &__desc {
+        margin-top: 2.5em;
+        font-size: 1.25em;
+
+        &--accent {
+            color: $clr-black;
+            font-weight: 600;
+        }
+    }
+}
