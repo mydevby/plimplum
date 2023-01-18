@@ -1,13 +1,8 @@
 .title {
-    font-weight: 800;
-    text-transform: uppercase;
-
-    &:first-letter {
-        color: $clr-black;
-    }
-
-    &--level-1 {
-        font-size: 110px;
-        line-height: .95;
+    &--level-1,
+	&--level-2 {
+        font-family: "YoungSerif-Regular", serif;
+		font-size: 40px;
+		line-height: 1;
     }
 }

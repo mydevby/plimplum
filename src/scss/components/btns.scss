@@ -15,14 +15,14 @@
 
 	&--light {
 		color: $clr-black;
-		border: 1px solid #76C1A7;
+		border: 1px solid $clr-accent;
 	}
 
 	&--dark {
 		line-height: 1;
 		color: $clr-white;
-		background-color: #76C1A7;
-		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(276.72deg, #76C1A7 0.35%, #85CCB3 104.76%);
+		background-color: $clr-accent;
+		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(276.72deg, $clr-accent 0.35%, #85CCB3 104.76%);
 		box-shadow: 0px 2px 0px #6ABB9F, inset 0px 4px 25px rgba(255, 255, 255, 0.4);
 	}
 }

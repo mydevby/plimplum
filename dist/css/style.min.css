@@ -85,22 +85,16 @@ body {
 }
 
 @font-face {
-  font-family: "Arkipelago";
+  font-family: "YoungSerif-Regular";
   font-style: normal;
   font-weight: 400;
-  src: local("Arkipelago "), url("../../files/fonts/roboto.woff2") format("woff2"), url("../../files/fonts/roboto.woff") format("woff");
+  src: local("Arkipelago "), url("../../files/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../../files/fonts/YoungSerif-Regular.woff") format("woff");
   font-display: swap;
 }
-.title {
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.title:first-letter {
-  color: #120F1C;
-}
-.title--level-1 {
-  font-size: 110px;
-  line-height: 0.95;
+.title--level-1, .title--level-2 {
+  font-family: "YoungSerif-Regular", serif;
+  font-size: 40px;
+  line-height: 1;
 }
 
 .header {
@@ -207,19 +201,70 @@ body {
 }
 
 .banner {
-  padding-top: 83px;
-  background-color: #f3f3f3;
-  display: flex;
+  padding: 118px 100px 59px;
+  background-color: #FFFFFF;
+}
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
   align-items: center;
+  gap: 50px;
+}
+.banner__video-block {
+  position: relative;
+  height: 0;
+  padding-bottom: 62%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #120F1C;
+}
+.banner__video-decor-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.banner__video-decor-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.banner__video-img-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .banner__content {
-  padding-left: 75px;
+  display: block;
 }
-.banner__desc {
-  margin-top: 2.5em;
-  font-size: 1.25em;
+.banner__title {
+  margin-bottom: 24px;
 }
-.banner__desc--accent {
-  color: #120F1C;
+.banner__list {
+  margin-bottom: 42px;
+}
+.banner__item {
+  padding-left: 30px;
+  margin-bottom: 9px;
+  font-weight: 300;
+  position: relative;
+}
+.banner__item:last-child {
+  margin-bottom: 0;
+}
+.banner__item--strong {
   font-weight: 600;
+}
+.banner__item:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/banner-list-icon.png") no-repeat 50% 50%/contain;
 }
