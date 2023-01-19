@@ -91,6 +91,9 @@ body {
   src: local("Arkipelago "), url("../../files/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../../files/fonts/YoungSerif-Regular.woff") format("woff");
   font-display: swap;
 }
+.title {
+  font-weight: 600;
+}
 .title--level-1, .title--level-2 {
   font-family: "YoungSerif-Regular", serif;
   font-size: 40px;
@@ -420,11 +423,76 @@ body {
 }
 
 .mission {
-  padding: 60px;
+  padding: 60px 0 66px;
 }
 .mission__title {
   text-align: center;
   margin-bottom: 35px;
+}
+.mission__wrapper {
+  display: grid;
+  max-width: 1040px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 320px 1fr;
+}
+.mission__img {
+  width: 100%;
+  height: auto;
+}
+.mission__list--right {
+  padding-left: 36px;
+}
+.mission__list--left {
+  padding-right: 16px;
+}
+.mission__item {
+  padding-bottom: 13px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #B4CEC5;
+}
+.mission__item:last-child {
+  margin-bottom: 0;
+}
+.mission__title-level-3 {
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 7px 11px 7px 15px;
+  margin-bottom: 7px;
+}
+.mission__title-level-3--light {
+  background: #76C1A7;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #76C1A7;
+  box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.4);
+}
+.mission__title-level-3--dark {
+  background: #120F1C;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), #454545;
+  box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.4);
+}
+.mission__text {
+  font-size: 17px;
+  line-height: 1.3;
+}
+.mission__text--strong {
+  font-weight: 600;
+}
+.mission__subitem {
+  padding-left: 28px;
+  position: relative;
+}
+.mission__subitem:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #120F1C;
+  border-radius: 50%;
+  left: 12px;
+  top: 11px;
 }
 
 .communication {
@@ -435,6 +503,13 @@ body {
   text-align: center;
   margin: 0 auto 55px;
 }
+.communication__tmp {
+  display: block;
+  max-width: 100%;
+  width: 684px;
+  height: auto;
+  margin: 0 auto;
+}
 
 .work {
   padding: 60px;
@@ -443,8 +518,13 @@ body {
   text-align: center;
   margin-bottom: 65px;
 }
-
-/*FAQ Page*/
+.work__tmp {
+  display: block;
+  max-width: 100%;
+  width: 446px;
+  height: auto;
+  margin: 0 auto;
+} /*FAQ Page*/
 .faq-banner {
   position: relative;
   background-color: #fbd2a7;

@@ -4,4 +4,12 @@
         text-align: center;
         margin-bottom: 65px;
     }
+
+    &__tmp {
+        display: block;
+        max-width: 100%;
+        width: 446px;
+        height: auto;
+        margin: 0 auto;
+    }
 }
