@@ -378,6 +378,7 @@ body {
 /*FAQ Page*/
 .faq-banner {
   position: relative;
+  background-color: #fbd2a7;
 }
 .faq-banner__poster {
   position: absolute;
