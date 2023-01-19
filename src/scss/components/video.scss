@@ -1,0 +1,40 @@
+.video {
+    padding: 59px 100px 64px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    &__wrapper {
+		display: grid;
+		grid-template-columns: 1.1fr 1fr;
+		align-items: center;
+	}
+
+    &__block {
+        padding-left: 44px;
+    }
+
+    &__poster-wrapper {
+        position: relative;
+        height: 0;
+        padding-bottom: 72%;
+        margin-bottom: 47px;
+    }
+
+    &__poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    &__btn-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
