@@ -426,6 +426,19 @@ body {
   background: url("../img/video/banner-video-decor-3a-x2.min.png") no-repeat 50% 50%/contain;
   animation: heart 0.3s infinite alternate ease-in;
 }
+.banner__arrow-2 {
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  right: -150px;
+  top: -40px;
+  background: url("../img/video/arrow-2.svg") no-repeat 50% 50%/contain;
+  opacity: 1;
+  transition: 0.3s;
+}
+.banner__arrow-2--hidden {
+  opacity: 0;
+}
 .banner__enjoy-text {
   position: relative;
   font-size: 14px;

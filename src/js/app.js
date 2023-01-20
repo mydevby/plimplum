@@ -15,6 +15,12 @@ window.onload = function(){
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;
 
+		if (pageYOffset > 10) {
+			document.querySelector('.banner__arrow-2').classList.remove('banner__arrow-2--hidden'); 
+		} else {
+			document.querySelector('.banner__arrow-2').classList.add('banner__arrow-2--hidden');
+		}
+
 		if (pageYOffset > 50) {
 			document.querySelector('.video__decoration-crown').classList.remove('video__decoration-crown--start'); 
 		} else {

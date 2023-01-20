@@ -176,6 +176,21 @@
 		}
 	}
 
+	&__arrow-2 {
+		position: absolute;
+		width: 140px;
+		height: 130px;
+		right: -150px;
+		top: -40px;
+		background: url("../img/video/arrow-2.svg") no-repeat 50% 50% /contain;
+		opacity: 1;
+		transition: .3s;
+
+		&--hidden {
+			opacity: 0;
+		}
+	}
+
 	&__enjoy-text {
 		position: relative;
 		font-size: 14px;
