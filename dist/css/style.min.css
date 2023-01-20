@@ -1,3 +1,11 @@
+@keyframes heart {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -581,6 +589,7 @@ body {
   width: 100%;
   height: 100%;
   background: url("../img/communication-decor-2b-x2.min.png") no-repeat 50% 50%/contain;
+  animation: heart 0.3s infinite alternate ease-in;
 }
 .communication__list {
   display: grid;
