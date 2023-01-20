@@ -1,5 +1,6 @@
 .communication {
-    padding: 60px;
+    padding: 60px 0 72px;
+	
     &__title {
         max-width: 850px;
         text-align: center;
@@ -11,6 +12,8 @@
         gap: 15px;
         grid-template-columns: 2.75fr 1.9fr 1.9fr;
         grid-template-rows: repeat(6, minmax(50px, 1fr));
+		max-width: 880px;
+		margin: 0 auto;
     }
 
     &__item {

@@ -538,7 +538,7 @@ body {
 }
 
 .communication {
-  padding: 60px;
+  padding: 60px 0 72px;
 }
 .communication__title {
   max-width: 850px;
@@ -550,6 +550,8 @@ body {
   gap: 15px;
   grid-template-columns: 2.75fr 1.9fr 1.9fr;
   grid-template-rows: repeat(6, minmax(50px, 1fr));
+  max-width: 880px;
+  margin: 0 auto;
 }
 .communication__item {
   position: relative;
@@ -649,19 +651,116 @@ body {
 }
 
 .work {
-  padding: 60px;
+  padding: 72px 20px 110px;
 }
 .work__title {
   text-align: center;
-  margin-bottom: 65px;
+  margin-bottom: 95px;
 }
-.work__tmp {
-  display: block;
-  max-width: 100%;
-  width: 446px;
-  height: auto;
+.work__wrapper {
+  max-width: 390px;
+  height: 220px;
   margin: 0 auto;
-} /*FAQ Page*/
+  position: relative;
+}
+.work__card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.work__card:hover {
+  z-index: 4;
+}
+.work__card:hover .work__card-text {
+  opacity: 1;
+}
+.work__card:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  pointer-events: none;
+}
+.work__card:after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: 0;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.work__card--1 {
+  width: 210px;
+  padding: 20px 10px 30px;
+  text-align: center;
+  justify-content: center;
+  z-index: 3;
+  color: #FFFFFF;
+}
+.work__card--1:before {
+  background-image: url("../img/svg/work-1.svg");
+}
+.work__card--1:after {
+  content: "01-03";
+  color: #FFFFFF;
+}
+.work__card--1 .work__card-text {
+  opacity: 1;
+}
+.work__card--2 {
+  width: 274px;
+  right: 90px;
+  left: auto;
+  padding: 20px 25px 20px 15px;
+  z-index: 2;
+  color: #FFFFFF;
+}
+.work__card--2:before {
+  background-image: url("../img/svg/work-2.svg");
+}
+.work__card--2:after {
+  content: "02-03";
+}
+.work__card--3 {
+  width: 330px;
+  right: 0;
+  left: 60px;
+  padding: 15px 10px;
+  z-index: 1;
+  color: #120F1C;
+}
+.work__card--3:before {
+  background-image: url("../img/svg/work-3.svg");
+}
+.work__card--3:after {
+  content: "03-03";
+}
+.work__card-text {
+  position: relative;
+  line-height: 1.2;
+  z-index: 2;
+  opacity: 0;
+}
+
+/*FAQ Page*/
 .faq-banner {
   position: relative;
   background-color: #fbd2a7;
