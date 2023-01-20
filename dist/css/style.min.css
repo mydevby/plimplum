@@ -412,7 +412,7 @@ body {
 }
 
 .video {
-  padding: 0 100px 64px;
+  padding: 0 100px;
   position: relative;
 }
 .video__anchor {
@@ -420,6 +420,11 @@ body {
   height: 0px;
   width: 0px;
   top: -55px;
+}
+.video__container {
+  padding-bottom: 64px;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 .video__title {
   text-align: center;
@@ -467,12 +472,12 @@ body {
   display: flex;
   flex-direction: column;
   background: #FAFAFA;
-  margin-bottom: 12px;
+  height: 350px;
+  width: 100%;
 }
 .video__item {
   display: flex;
   padding: 14px 20px;
-  margin-bottom: 23px;
   cursor: pointer;
 }
 .video__item--active {
@@ -482,9 +487,8 @@ body {
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 .video__item-poster {
-  width: 100%;
-  max-width: 154px;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 .video__item-name {
   font-weight: 600;
@@ -493,7 +497,7 @@ body {
   max-width: 100%;
   overflow: hidden;
 }
-.video__next {
+.video__next, .video__prev {
   font-size: 0;
   background: #FAFAFA;
   border-radius: 5px;
@@ -503,19 +507,30 @@ body {
   transition: 0.3s;
   margin-left: 6px;
 }
-.video__next:before {
+.video__next:before, .video__prev:before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 13px;
   height: 10px;
-  transform: translate(-50%, -50%);
   transition: 0.3s;
   background: url("../img/svg/next-icon.svg") no-repeat 50% 50%/contain;
 }
-.video__next:hover {
+.video__next:hover, .video__prev:hover {
   background: rgba(222, 222, 222, 0.4);
+}
+.video__prev {
+  margin-bottom: 12px;
+}
+.video__prev:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.video__next {
+  margin-top: 12px;
+}
+.video__next:before {
+  transform: translate(-50%, -50%);
 }
 .video__btn-wrapper {
   display: flex;
@@ -645,6 +660,7 @@ body {
   bottom: -9px;
   border: 5px solid #B4CEC5;
   transition: 0.3s;
+  z-index: 2;
 }
 .mission__round--1, .mission__round--2 {
   right: -32px;

@@ -1,5 +1,5 @@
 .video {
-    padding: 0 100px 64px;
+    padding: 0 100px;
     position: relative;
 
     &__anchor {
@@ -7,6 +7,12 @@
         height: 0px;
         width: 0px;
         top: -55px;
+    }
+
+    &__container {
+        padding-bottom: 64px;
+        max-width: 1150px;
+        margin: 0 auto;
     }
 
     &__title {
@@ -65,13 +71,13 @@
         display: flex;
         flex-direction: column;
         background: #FAFAFA;
-        margin-bottom: 12px;
+        height: 350px;
+        width: 100%;
     }
 
     &__item {
         display: flex;
         padding: 14px 20px;
-        margin-bottom: 23px;
         cursor: pointer;
 
         &--active {
@@ -83,9 +89,8 @@
     }
 
     &__item-poster {
-        width: 100%;
-        max-width: 154px;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 
     &__item-name {
@@ -96,7 +101,8 @@
         overflow: hidden;
     }
 
-    &__next {
+    &__next,
+    &__prev {
         font-size: 0;
         background: #FAFAFA;
         border-radius: 5px;
@@ -113,13 +119,26 @@
             left: 50%;
             width: 13px;
             height: 10px;
-            transform: translate(-50%, -50%);
             transition: .3s;
             background: url("../img/svg/next-icon.svg") no-repeat 50% 50% / contain;
         }
 
         &:hover {
             background: rgba(222, 222, 222, 0.4);
+        }
+    }
+
+    &__prev {
+        margin-bottom: 12px;
+        &:before {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+
+    &__next {
+        margin-top: 12px;
+        &:before {
+            transform: translate(-50%, -50%);
         }
     }
 

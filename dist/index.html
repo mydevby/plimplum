@@ -6,6 +6,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -96,7 +97,7 @@
 	</section>
 	<section class="video">
 		<div class="video__anchor" id="course"></div>
-		<div class="container">
+		<div class="video__container">
 			<h2 class="video__title title title--level-2">
 				<span class="title--accent">TOP-5</span> Q&A of the month
 			</h2>
@@ -111,30 +112,47 @@
 					</div>
 				</div>
 				<div class="video__list-wrapper">
-					<ul class="video__list">
-						<li class="video__item video__item--active">
-							<picture class="video__item-poster">
-								<source srcset="img/video/video-poster-big-1.min.webp">
-								<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-							</picture>
-							<p class="video__item-name">Yoni's pleasure</p>
-						</li>
-						<li class="video__item video__item">
-							<picture class="video__item-poster">
-								<source srcset="img/video/video-poster-big-1.min.webp">
-								<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-							</picture>
-							<p class="video__item-name">Am I Okay? All about fetishes</p>
-						</li>
-						<li class="video__item video__item">
-							<picture class="video__item-poster">
-								<source srcset="img/video/video-poster-big-1.min.webp">
-								<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-							</picture>
-							<p class="video__item-name">All about consent culture</p>
-						</li>
-					</ul>
-					<button class="video__next">Next</button>
+					<button class="video__prev js--video__prev">Prev</button>
+					<div class="video__list js--video__list swiper">
+						<div class="swiper-wrapper">
+							<div class="video__item video__item--active swiper-slide">
+								<picture class="video__item-poster">
+									<source srcset="img/video/video-poster-big-1.min.webp">
+									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
+								</picture>
+								<p class="video__item-name">Yoni's pleasure</p>
+							</div>
+							<div class="video__item video__item swiper-slide">
+								<picture class="video__item-poster">
+									<source srcset="img/video/video-poster-big-1.min.webp">
+									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
+								</picture>
+								<p class="video__item-name">Am I Okay? All about fetishes</p>
+							</div>
+							<div class="video__item video__item swiper-slide">
+								<picture class="video__item-poster">
+									<source srcset="img/video/video-poster-big-1.min.webp">
+									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
+								</picture>
+								<p class="video__item-name">All about consent culture</p>
+							</div>
+							<div class="video__item video__item swiper-slide">
+								<picture class="video__item-poster">
+									<source srcset="img/video/video-poster-big-1.min.webp">
+									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
+								</picture>
+								<p class="video__item-name">All about consent culture culture culture</p>
+							</div>
+							<div class="video__item video__item swiper-slide">
+								<picture class="video__item-poster">
+									<source srcset="img/video/video-poster-big-1.min.webp">
+									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
+								</picture>
+								<p class="video__item-name">All about</p>
+							</div>
+						</div>
+					</div>
+					<button class="video__next js--video__next">Next</button>
 				</div>
 			</div>
 			<div class="video__btn-wrapper">
@@ -401,6 +419,7 @@
 		</div>
 	</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 </html>
