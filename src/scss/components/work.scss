@@ -1,5 +1,23 @@
 .work {
-    padding: 72px 20px 110px;
+	padding: 0 120px;
+	overflow: hidden;
+	
+	&__container {
+		padding: 72px 20px 110px;
+		background: rgb(180, 206, 197, .1);
+		position: relative;
+		border-radius: 40px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -36px;
+			left: 36px;
+			width: 172px;
+			height: 180px;
+			background: url("../img/work-decor-x2.min.png") no-repeat 50% 50% /contain;
+		}
+	}
     
     &__title {
         text-align: center;
@@ -24,9 +42,11 @@
 		cursor: pointer;
 		display: flex;
 		align-items: center;
+		transition: .3s;
 
 		&:hover {
 			z-index: 4;
+			transform: scale(1.05);
 			.work__card-text {
 				opacity: 1;
 			}

@@ -538,20 +538,55 @@ body {
 }
 
 .communication {
-  padding: 60px 0 72px;
+  padding: 0 120px;
+  overflow: hidden;
+}
+.communication__container {
+  padding: 60px 0 128px;
 }
 .communication__title {
   max-width: 850px;
   text-align: center;
   margin: 0 auto 55px;
 }
+.communication__wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  position: relative;
+}
+.communication__wrapper:before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: -300px;
+  width: 270px;
+  height: 300px;
+  z-index: 2;
+  background: url("../img/communication-decor-1-x2.min.png") no-repeat 50% 50%/contain;
+}
+.communication__decor-2 {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 186px;
+  height: 154px;
+  background: url("../img/communication-decor-2a-x2.min.png") no-repeat 50% 50%/contain;
+  z-index: 2;
+}
+.communication__decor-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/communication-decor-2b-x2.min.png") no-repeat 50% 50%/contain;
+}
 .communication__list {
   display: grid;
   gap: 15px;
   grid-template-columns: 2.75fr 1.9fr 1.9fr;
   grid-template-rows: repeat(6, minmax(50px, 1fr));
-  max-width: 880px;
-  margin: 0 auto;
 }
 .communication__item {
   position: relative;
@@ -651,7 +686,23 @@ body {
 }
 
 .work {
+  padding: 0 120px;
+  overflow: hidden;
+}
+.work__container {
   padding: 72px 20px 110px;
+  background: rgba(180, 206, 197, 0.1);
+  position: relative;
+  border-radius: 40px;
+}
+.work__container:before {
+  content: "";
+  position: absolute;
+  bottom: -36px;
+  left: 36px;
+  width: 172px;
+  height: 180px;
+  background: url("../img/work-decor-x2.min.png") no-repeat 50% 50%/contain;
 }
 .work__title {
   text-align: center;
@@ -674,9 +725,11 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: 0.3s;
 }
 .work__card:hover {
   z-index: 4;
+  transform: scale(1.05);
 }
 .work__card:hover .work__card-text {
   opacity: 1;
