@@ -52,5 +52,10 @@ window.onload = function(){
 	const swiper1 = new Swiper('.js--banner__slider', {
 		slidesPerView: "auto",
 		loop: true,
+		spaceBetween: 10,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		  },
 	});
 };

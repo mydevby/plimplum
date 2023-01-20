@@ -318,7 +318,7 @@ body {
   border-radius: 15px 0 0 15px;
   display: flex;
   overflow: hidden;
-  padding: 16px 0 16px 6px;
+  padding: 16px 0 16px 16px;
 }
 .banner__slide {
   width: 120px;
