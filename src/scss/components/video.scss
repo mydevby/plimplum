@@ -1,5 +1,13 @@
 .video {
     padding: 0 100px 64px;
+    position: relative;
+
+    &__anchor {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        top: -55px;
+    }
 
     &__title {
         text-align: center;

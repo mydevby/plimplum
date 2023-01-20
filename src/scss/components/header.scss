@@ -6,6 +6,12 @@
     top: 0;
 	background: #ecefee;
 	padding: 18.1px 80px;
+	transition: .3s;
+
+	&--scroll {
+		padding-top: 10.1px;
+		padding-bottom: 10.1px;
+	}
 
 
 	&__wrapper {
