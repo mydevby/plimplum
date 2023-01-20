@@ -6,3 +6,21 @@
 		transform: scale(1.05);
 	}
 }
+
+@keyframes face {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(-10deg);
+	}
+}
+
+@keyframes camera {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(-15deg);
+	}
+}
