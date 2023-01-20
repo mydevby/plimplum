@@ -1,9 +1,11 @@
 .communication {
-    padding: 0 120px;
+    padding: 0 20px;
 	overflow: hidden;
 
 	&__container {
 		padding: 60px 0 128px;
+		max-width: 880px;
+		margin: 0 auto;
 	}
     &__title {
         max-width: 850px;
@@ -12,8 +14,6 @@
     }
 
 	&__wrapper {
-		max-width: 880px;
-		margin: 0 auto;
 		position: relative;
 
 		&:before {

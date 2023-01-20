@@ -1,5 +1,6 @@
 .mission {
-    padding: 60px 0 66px;
+    padding: 0 20px;
+    
     &__title {
         text-align: center;
         margin-bottom: 35px;
@@ -10,6 +11,7 @@
         max-width: 1040px;
         margin: 0 auto;
         grid-template-columns: 1fr 320px 1fr;
+        padding: 60px 0 66px;
     }
 
     &__img-wrapper {

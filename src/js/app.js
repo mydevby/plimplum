@@ -4,22 +4,13 @@ window.onload = function(){
 	videoItems.forEach(item => {
 		item.addEventListener('click', function(e) {
 			let videoItemsActive = document.querySelector('.video__item--active');
+			let videoName  = document.querySelector('.video__name');
+			let name = item.dataset.name;
 			videoItemsActive.classList.remove('video__item--active');
 			item.classList.add('video__item--active');
+			videoName.textContent = name;
 		});
 	});	
-	// for (let i = 0; videoItems.length > i; i++) {
-	// 	videoItems[i].onclick = function() {
-	// 		let currentActive = videoItemsActive[0];
-	// 		console.log('work');
-	// 		if (currentActive) {
-	// 			currentActive.classList.remove('.video__item--active');
-	// 		}
-	// 		if (currentActive !== this) {
-	// 			this.classList.add('.video__item--active');
-	// 		}
-	// 	};
-	// }
 
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;

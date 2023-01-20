@@ -164,12 +164,13 @@ body {
   right: 0;
   top: 0;
   background: #ecefee;
-  padding: 18.1px 80px;
+  padding: 0 20px;
   transition: 0.3s;
 }
-.header--scroll {
-  padding-top: 10.1px;
-  padding-bottom: 10.1px;
+.header__container {
+  padding: 18px 0;
+  max-width: 1380px;
+  margin: 0 auto;
 }
 .header__wrapper {
   display: flex;
@@ -270,12 +271,14 @@ body {
 }
 
 .banner {
-  padding: 0 100px;
+  padding: 0 20px;
   background-color: #FFFFFF;
   overflow: hidden;
 }
 .banner__container {
   padding: 120px 0;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .banner__wrapper {
   display: grid;
@@ -464,6 +467,19 @@ body {
   transform: translate(-50%, -50%);
   transition: 0.3s;
 }
+.video__name {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  right: 30px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .video__list-wrapper {
   display: flex;
   flex-direction: column;
@@ -488,6 +504,7 @@ body {
 }
 .video__item-poster {
   width: auto;
+  flex-shrink: 0;
   height: 100%;
 }
 .video__item-name {
@@ -538,7 +555,7 @@ body {
 }
 
 .mission {
-  padding: 60px 0 66px;
+  padding: 0 20px;
 }
 .mission__title {
   text-align: center;
@@ -549,6 +566,7 @@ body {
   max-width: 1040px;
   margin: 0 auto;
   grid-template-columns: 1fr 320px 1fr;
+  padding: 60px 0 66px;
 }
 .mission__img-wrapper {
   position: relative;
@@ -670,11 +688,13 @@ body {
 }
 
 .communication {
-  padding: 0 120px;
+  padding: 0 20px;
   overflow: hidden;
 }
 .communication__container {
   padding: 60px 0 128px;
+  max-width: 880px;
+  margin: 0 auto;
 }
 .communication__title {
   max-width: 850px;
@@ -682,8 +702,6 @@ body {
   margin: 0 auto 55px;
 }
 .communication__wrapper {
-  max-width: 880px;
-  margin: 0 auto;
   position: relative;
 }
 .communication__wrapper:before {
