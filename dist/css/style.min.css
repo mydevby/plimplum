@@ -3,7 +3,7 @@
     transform: scale(1);
   }
   to {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
