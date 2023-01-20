@@ -15,10 +15,10 @@ window.onload = function(){
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;
 
-		if (pageYOffset > 0) {
-			//header.classList.add('header--scroll'); 
+		if (pageYOffset > 50) {
+			document.querySelector('.video__decoration-crown').classList.remove('video__decoration-crown--start'); 
 		} else {
-			//header.classList.remove('header--scroll'); 
+			document.querySelector('.video__decoration-crown').classList.add('video__decoration-crown--start');
 		}
     };
 
@@ -37,15 +37,20 @@ window.onload = function(){
 		});
 	});	
 
-	const swiper = new Swiper('.js--video__list', {
+	const swiper2 = new Swiper('.js--video__list', {
 		direction: 'vertical',
 		slidesPerView: 3,
 		navigation: {
-		  nextEl: '.js--video__next',
-		  prevEl: '.js--video__prev',
+			nextEl: '.js--video__next',
+			prevEl: '.js--video__prev',
 		},
 		scrollbar: {
-		  el: '.swiper-scrollbar',
+			el: '.swiper-scrollbar',
 		},
-	  });
+	});
+
+	const swiper1 = new Swiper('.js--banner__slider', {
+		slidesPerView: "auto",
+		loop: true,
+	});
 };

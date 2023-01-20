@@ -1,5 +1,5 @@
 .video {
-    padding: 0 100px;
+    padding: 0 20px;
     position: relative;
 
     &__anchor {
@@ -60,6 +60,29 @@
         height: 76px;
         transform: translate(-50%, -50%);
         transition: .3s;
+    }
+
+    &__decoration-text {
+        position: absolute;
+        width: 159px;
+        height: 54px;
+        bottom: -60px;
+        left: 50%;
+        background: url("../img/svg/video-text.svg") no-repeat 50% 50% /contain;
+    }
+
+    &__decoration-crown {
+        position: absolute;
+        width: 210px;
+        height: 180px;
+        top: -120px;
+        left: -100px;
+        background: url("../img/video/video-crown-x2.min.png") no-repeat 50% 50% /contain;
+        transition: 2s;
+
+        &--start {
+            transform: translateX(-1150px)
+        }
     }
 
     &__name {

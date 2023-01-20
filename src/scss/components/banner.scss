@@ -24,6 +24,45 @@
 		background-color: $clr-black;
 	}
 
+	&__banner-play {
+        position: absolute;
+        top: 12px;
+        left: 32px;
+        width: 76px;
+        height: 76px;
+        transition: .3s;
+		z-index: 2;
+		cursor: pointer;
+		&:hover {
+			.video__banner-play {
+				transform: scale(1.05);
+			}
+		}
+    }
+
+	&__slider {
+		position: absolute;
+		z-index: 2;
+		width: 340px;
+		height: 143px;
+		right: 0;
+		bottom: 16px;
+		background: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(7.5px);
+		border-radius: 15px 0 0 15px;
+		display: flex;
+		overflow: hidden;
+		padding: 16px 0 16px 6px;
+	}
+
+	&__slide {
+		width: 120px;
+		min-width: 120px;
+		height: auto;
+		flex-shrink: 0;
+		cursor: pointer;
+	}
+
 	&__video-decor-1 {
 		position: absolute;
 		top: -43px;
