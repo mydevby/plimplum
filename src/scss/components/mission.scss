@@ -1,6 +1,14 @@
 .mission {
     padding: 0 20px;
-    
+    position: relative;
+
+    &__anchor {
+        position: absolute;
+        height: 0px;
+        width: 0px;
+        top: -55px;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 35px;

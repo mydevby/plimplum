@@ -661,6 +661,13 @@ body {
 
 .mission {
   padding: 0 20px;
+  position: relative;
+}
+.mission__anchor {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: -55px;
 }
 .mission__title {
   text-align: center;
