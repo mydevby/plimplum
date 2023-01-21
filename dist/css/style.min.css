@@ -219,7 +219,6 @@ body {
   background: #ecefee;
   padding: 0 20px;
   transition: 0.3s;
-  position: relative;
 }
 .header__mob-menu {
   position: absolute;
