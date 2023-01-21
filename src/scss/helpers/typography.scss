@@ -1,11 +1,16 @@
 .title {
+    font-family: "YoungSerif-Regular", serif;
     font-weight: 600;
 
     &--level-1,
 	&--level-2 {
-        font-family: "YoungSerif-Regular", serif;
 		font-size: 40px;
 		line-height: 1;
+    }
+
+    &--level-3 {
+        font-size: 28px;
+        line-height: 1.2;
     }
 
     &--accent {

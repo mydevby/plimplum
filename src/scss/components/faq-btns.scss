@@ -1,0 +1,55 @@
+.faq-btns {
+    padding: 0 20px;
+
+    &__container {
+        padding: 22px 0 60px;
+        max-width: 900px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px;
+    }
+
+    &__btn {
+        background: rgba(118, 193, 167, .8);
+        transition: .3s;
+        border-radius: 6px;
+        display: block;
+        padding: 27px 10px;
+        position: relative;
+        text-align: center;
+        min-width: 276px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline;
+        color: $clr-white;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.22;
+
+        &:hover {
+            background: $clr-accent;
+        }
+    }
+
+    &__btn-icon {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: -12px 10px -16px 0;
+
+        &--account {
+            background-image: url("../img/svg/faq-icon-account.svg");
+        }
+        &--start {
+            background-image: url("../img/svg/faq-icon-start.svg");
+        }
+        &--troubleshooting {
+            background-image: url("../img/svg/faq-icon-troubleshooting.svg");
+        }
+    }
+}
