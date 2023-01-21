@@ -159,7 +159,7 @@ body {
   font-family: "YoungSerif-Regular";
   font-style: normal;
   font-weight: 400;
-  src: local("Arkipelago "), url("../../files/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../../files/fonts/YoungSerif-Regular.woff") format("woff");
+  src: local("Arkipelago "), url("../files/fonts/YoungSerif-Regular.woff2") format("woff2"), url("../files/fonts/YoungSerif-Regular.woff") format("woff");
   font-display: swap;
 }
 .title {
