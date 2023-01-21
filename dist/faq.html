@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>FAQ | PlimPlum</title>
+	<title>FAQ | PlimPlum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,19 +30,29 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="header__banner-wrapper">
+			<div class="header__btns-wrapper">
 				<a class="header__btn btn btn--small btn--dark" href="#">Log out</a>
 			</div>
-			<button class="header__burger js-menu"  style="display: none;">
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
+			<button class="header__burger">
 				<span class="header__burger-text">Меню</span>
 			</button>
 		</div>
 	</div>
+	<div class="header__mob-menu">
+		<div class="header__mob-menu-wrapper">
+			<ul class="header__nav-list">
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="index.html">Home page</a>
+				</li>
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="contacts.html">Contacts</a>
+				</li>
+			</ul>
+			<a class="header__btn btn btn--small btn--light" href="#">Log out</a>
+		</div>
+	</div>
 </header>
-<main class="faq-page" data-scroll-container>
+<main class="faq-page">
 	<section class="faq-banner">
 		<picture class="faq-banner__poster">
 			<source srcset="img/faq/banner-bg.min.webp">

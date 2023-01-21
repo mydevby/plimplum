@@ -1,5 +1,5 @@
 .footer {
-    padding: 0 120px;
+    padding: 0 20px;
 	overflow: hidden;
 	background: $clr-white;
 
@@ -10,16 +10,27 @@
     &__container {
         padding: 37px 0 30px;
         display: grid;
-        grid-template-columns: 370px 1fr 370px;
-        gap: 15px;
-		max-width: 1280px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 55px;
+		max-width: 1210px;
 		margin: 0 auto;
+        @media (max-width: 1024px) {
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            gap: 10px;
+            grid-template-columns: 1fr;
+            max-width: 500px;
+        } 
     }
 
     &__nav-list {
         display: flex;
         flex-wrap: wrap;
         padding: 10px 0;
+        @media (max-width: 768px) {
+            padding-top: 40px;
+        }
     }
 
     &__nav-item {
@@ -46,6 +57,9 @@
     &__logo-wrapper {
         display: flex;
         justify-content: center;
+        @media (max-width: 768px) {
+            grid-row-start: 1;
+        } 
     }
 
     &__logo {
@@ -56,6 +70,9 @@
 
     &__subscribe-wrapper {
         display: block;
+        @media (max-width: 768px) {
+            grid-row-start: 2;
+        }
     }
 
 	&__subscribe-text {
@@ -78,6 +95,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		color: $clr-black;
+        width: 100%;
 
 		&::placeholder {
 			color: rgba(135, 141, 150, .4);

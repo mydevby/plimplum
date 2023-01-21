@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
     <title>Home page | PlimPlum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,16 +45,41 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="header__banner-wrapper">
+			<div class="header__btns-wrapper">
 				<a class="header__btn btn btn--small btn--light" href="#">Sign up</a>
 				<a class="header__btn btn btn--small btn--dark" href="#">Login</a>
 			</div>
-			<button class="header__burger js-menu"  style="display: none;">
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
+			<button class="header__burger">
 				<span class="header__burger-text">Меню</span>
 			</button>
+		</div>
+	</div>
+	<div class="header__mob-menu">
+		<div class="header__mob-menu-nav">
+			<ul class="header__nav-list">
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="#mission">About Us</a>
+				</li>
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="#course">The course</a>
+					<ul class="header__nav-sublist" style="display: none;">
+						<li class="header__nav-subitem">
+							<a  class="header__nav-sublink" href="#">Course Name One</a>
+						</li>
+						<li class="header__nav-subitem">
+							<a  class="header__nav-sublink" href="#">Course Name Two</a>
+						</li>
+						<li class="header__nav-subitem">
+							<a  class="header__nav-sublink" href="#">Course Name Three</a>
+						</li>
+					</ul>
+				</li>
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="faq.html">FAQ</a>
+				</li>
+			</ul>
+			<a class="header__btn btn btn--small btn--light" href="#">Sign up</a>
+			<a class="header__btn btn btn--small btn--dark" href="#">Login</a>
 		</div>
 	</div>
 </header>

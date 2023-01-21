@@ -61,3 +61,12 @@
 		transform: rotate(-15deg);
 	}
 }
+
+@keyframes camera-contacts {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(15deg);
+	}
+}

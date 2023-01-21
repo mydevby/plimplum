@@ -18,10 +18,18 @@
         align-items: center;
         position: relative;
         z-index: 2;
+
+        @media (max-width: 1024px) {
+            padding: 173px 20px 142px;
+        }
+        @media (max-width: 768px) {
+            padding: 132px 20px 120px;
+        }
     }
 
     &__title {
         margin-bottom: 25px;
+        text-align: center;
     }
 
     &__input-wrapper {
@@ -34,8 +42,8 @@
         background: rgba(118, 193, 167, 0.3);
         border: 1px solid #FFFFFF;
         border-radius: 6px;
-        width: 380px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 380px;
         overflow: hidden;
         text-overflow: ellipsis;
         color: $clr-white;

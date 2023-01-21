@@ -24,6 +24,8 @@ html {
 	font-family: "Inter", "Roboto", "Arial", sans-serif;
 	line-height: 1.7;
 	color: $clr-black;
+	overflow-x: hidden;
+	max-width: 100%;
 }
 
 a, button {
@@ -76,6 +78,8 @@ textarea {
 body {
 	font-family: "Inter", "Roboto", "Arial", sans-serif;
 	background: $clr-white;
+	overflow-x: hidden;
+	max-width: 100%;
 }
 
 .container {

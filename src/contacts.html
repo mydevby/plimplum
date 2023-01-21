@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
     <title>Contacts | PlimPlum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,19 +30,29 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="header__banner-wrapper">
+			<div class="header__btns-wrapper">
 				<a class="header__btn btn btn--small btn--dark" href="#">Log out</a>
 			</div>
-			<button class="header__burger js-menu"  style="display: none;">
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
-				<span class="header__burger-line"></span>
+			<button class="header__burger">
 				<span class="header__burger-text">Меню</span>
 			</button>
 		</div>
 	</div>
+	<div class="header__mob-menu">
+		<div class="header__mob-menu-wrapper">
+			<ul class="header__nav-list">
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="index.html">Home page</a>
+				</li>
+				<li class="header__nav-item">
+					<a  class="header__nav-link" href="faq.html">FAQ</a>
+				</li>
+			</ul>
+			<a class="header__btn btn btn--small btn--light" href="#">Log out</a>
+		</div>
+	</div>
 </header>
-<main class="contacts-page" data-scroll-container>
+<main class="contacts-page">
 	<section class="contacts">
         <div class="contacts__container">
             <h1 class="contacts__hidden visually-hidden">Contacts</h1>
@@ -61,6 +73,7 @@
                     </li>
                 </ul>
 				<div class="contacts__decor"></div>
+				<div class="contacts__decor-2"></div>
             </div>			
         </div>
     </section>

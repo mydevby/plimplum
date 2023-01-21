@@ -8,17 +8,27 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 36px;
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+            gap: 16px;
+            padding: 17px 0 40px;
+        }
+        @media (max-width: 768px) {
+            max-width: 280px;
+            gap: 10px;
+            padding: 2px 0 35px;
+        }
     }
 
     &__btn {
         background: rgba(118, 193, 167, .8);
         transition: .3s;
         border-radius: 6px;
-        display: block;
         padding: 27px 10px;
         position: relative;
         text-align: center;
-        min-width: 276px;
+        width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

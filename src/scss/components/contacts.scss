@@ -1,32 +1,67 @@
 .contacts {
     padding: 0 20px;
+    overflow: hidden;
 
     &__container {
         padding: 125px 0 92px;
         max-width: 1140px;
         margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            padding: 121px 0 92px;
+        }
+        @media (max-width: 768px) {
+            padding: 113px 0 92px;
+        }
     }
 
     &__title {
         max-width: 880px;
         margin: 0 auto 82px;
         text-align: center;
+        @media (max-width: 1024px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: 768px) {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
     }
 
     &__content {
         display: grid;
         grid-template-columns: 528px 1fr;
         gap: 40px;
+        position: relative;
+        @media (max-width: 1024px) {
+            grid-template-columns: 428px 1fr;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__list {
         padding: 24px 32px;
         border-radius: 20px;
-        background: rgba(180, 206, 197, 0.2)
+        background: rgba(180, 206, 197, 0.2);
+        @media (max-width: 1024px) {
+            padding: 24px 16px;
+        }
+        @media (max-width: 768px) {
+            padding: 32px 8px;
+        }
     }
 
     &__item {
         margin-bottom: 55px;
+        @media (max-width: 1024px) {
+            margin-bottom: 45px;
+        }
+        @media (max-width: 768px) {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -38,6 +73,13 @@
         transition: .3s;
         font-size: 24px;
         line-height: 1.2;
+        @media (max-width: 1024px) {
+            font-size: 22px;
+        }
+        @media (max-width: 768px) {
+            color: $clr-accent;
+            font-size: 20px;
+        }
 
         &:hover {
             opacity: .5;
@@ -47,9 +89,35 @@
     &__text {
         font-size: 22px;
         line-height: 1.2;
+        @media (max-width: 1024px) {
+            font-size: 19px;
+        }
+        @media (max-width: 768px) {
+            text-align: center;
+            font-size: 16px;
+        }
     }
 
     &__decor {
         background: url("../img/contacts-decor-x2.min.png") no-repeat 50% 50% /contain;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__decor-2 {
+        display: none;
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        width: 116px;
+        height: 156px;
+        right: -28px;
+        bottom: -100px;
+        background: url("../img/contacts-decor-2-x2.min.png") no-repeat 50% 50% /contain;
+        animation: camera-contacts 5s infinite alternate ease-in;
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 }
