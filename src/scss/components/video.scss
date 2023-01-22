@@ -32,7 +32,8 @@
         margin-bottom: 47px;
         position: relative;
         @media (max-width: 1024px) {
-			grid-template-columns: 11fr;
+			grid-template-columns: 1fr;
+            margin-bottom: 55px;
 		}
 	}
 
@@ -44,6 +45,11 @@
         height: 190px;
         background: url("../img/video/video-popcorn-glass-x2.min.png") no-repeat 50% 50% /contain;
         z-index: 1;
+        @media (max-width: 1024px) {
+			transform: scale(.75);
+            right: -40px;
+            bottom: -100px;
+		}
     }
 
     &__popcorn-inner {
@@ -129,6 +135,9 @@
         bottom: -60px;
         left: 50%;
         background: url("../img/svg/video-text.svg") no-repeat 50% 50% /contain;
+        @media (max-width: 1024px) {
+			display: none;
+		}
     }
 
     &__decoration-crown {
@@ -235,6 +244,10 @@
         &:before {
             transform: translate(-50%, -50%) rotate(180deg);
         }
+        @media (max-width: 1024px) {
+            margin-top: 10px;
+			margin-bottom: 10px;
+		}
     }
 
     &__next {
@@ -242,10 +255,16 @@
         &:before {
             transform: translate(-50%, -50%);
         }
+        @media (max-width: 1024px) {
+			margin-top: 10px;
+		}
     }
 
     &__btn-wrapper {
         display: flex;
         justify-content: center;
+        @media (max-width: 1024px) {
+			display: none;
+		}
     }
 }

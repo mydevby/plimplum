@@ -774,7 +774,8 @@ main {
 }
 @media (max-width: 1024px) {
   .video__wrapper {
-    grid-template-columns: 11fr;
+    grid-template-columns: 1fr;
+    margin-bottom: 55px;
   }
 }
 .video__popcorn {
@@ -785,6 +786,13 @@ main {
   height: 190px;
   background: url("../img/video/video-popcorn-glass-x2.min.png") no-repeat 50% 50%/contain;
   z-index: 1;
+}
+@media (max-width: 1024px) {
+  .video__popcorn {
+    transform: scale(0.75);
+    right: -40px;
+    bottom: -100px;
+  }
 }
 .video__popcorn-inner {
   position: absolute;
@@ -859,6 +867,11 @@ main {
   bottom: -60px;
   left: 50%;
   background: url("../img/svg/video-text.svg") no-repeat 50% 50%/contain;
+}
+@media (max-width: 1024px) {
+  .video__decoration-text {
+    display: none;
+  }
 }
 .video__decoration-crown {
   position: absolute;
@@ -951,15 +964,31 @@ main {
 .video__prev:before {
   transform: translate(-50%, -50%) rotate(180deg);
 }
+@media (max-width: 1024px) {
+  .video__prev {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 .video__next {
   margin-top: 12px;
 }
 .video__next:before {
   transform: translate(-50%, -50%);
 }
+@media (max-width: 1024px) {
+  .video__next {
+    margin-top: 10px;
+  }
+}
 .video__btn-wrapper {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 1024px) {
+  .video__btn-wrapper {
+    display: none;
+  }
 }
 
 .mission {
