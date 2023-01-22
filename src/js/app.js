@@ -21,7 +21,7 @@ window.onload = function() {
 
 	/*start section banner*/
 
-	if (document.querySelectorAll('.banner__play') !== null && document.querySelectorAll('.banner__pause') !== null) {
+	if ((document.querySelector('.banner__play') !== null) && (document.querySelector('.banner__pause') !== null)) {
 		document.querySelector('.banner__play').addEventListener('click', function() {
 			this.classList.add('banner__play--hidden');
 			let index = document.querySelector('.banner__video-item--active').dataset.index;
@@ -39,7 +39,7 @@ window.onload = function() {
 		});
 	};
 
-	if (document.querySelectorAll('.banner__video-item') !== null) {
+	if (document.querySelector('.banner__video-item') !== null) {
 		let videoItems  = document.querySelectorAll('.banner__video-item');
 		videoItems.forEach(item => {
 			item.addEventListener('click', function(e) {
@@ -65,7 +65,7 @@ window.onload = function() {
 
 	/*start section video*/
 
-	if (document.querySelectorAll('.video__play') !== null && document.querySelectorAll('.video__pause') !== null) {
+	if ((document.querySelector('.video__play') !== null) && (document.querySelectorAll('.video__pause') !== null)) {
 		document.querySelector('.video__play').addEventListener('click', function() {
 			this.classList.add('video__play--hidden');
 			let index = document.querySelector('.video__item--active').dataset.index;
