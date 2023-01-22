@@ -102,11 +102,9 @@ window.onload = function() {
 		link.addEventListener('click', function(e) {
 			e.preventDefault();    
 			let href = this.getAttribute('href').substring(1);
-			let header = document.querySelector('.header');  
-			const scrollTarget = document.getElementById(href);    
-			const topOffset = header.offsetHeight;
+			const scrollTarget = document.getElementById(href);
 			const elementPosition = scrollTarget.getBoundingClientRect().top;
-			const offsetPosition = elementPosition - topOffset;
+			const offsetPosition = elementPosition;
 			window.scrollBy({
 				top: offsetPosition,
 				behavior: 'smooth'

@@ -1,17 +1,16 @@
 .banner {
 	padding: 0 20px;
 	background-color: $clr-white;
-	overflow: hidden;
 
 	&__container {
-		padding: 120px 0;
-		max-width: 1280px;
+		padding: 37px 0 160px;
+		max-width: 1270px;
 		margin: 0 auto;
 	}
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: 1.1fr 1fr;
+		grid-template-columns: 1.23fr 1fr;
 		align-items: center;
 		position: relative;
 	}
@@ -70,6 +69,7 @@
 		width: 195px;
 		height: 196px;
 		opacity: .7;
+		pointer-events: none;
 	}
 
 	&__video-decor-2 {
@@ -79,6 +79,7 @@
 		width: 178px;
 		height: 134px;
 		opacity: .7;
+		pointer-events: none;
 	}
 
 	&__video-img-main {
@@ -148,10 +149,9 @@
 	&__arrow {
 		position: absolute;
 		width: 196px;
-		height: 175px;
-		right: -230px;
-		bottom: -155px;
-		overflow: hidden;
+		height: 115px;
+		right: -200px;
+		bottom: -120px;
 
 		&:before {
 			content: "";

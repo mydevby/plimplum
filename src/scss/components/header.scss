@@ -1,9 +1,4 @@
 .header {
-	position: fixed;
-    z-index: 100;
-    left: 0;
-    right: 0;
-    top: 0;
 	background: #ecefee;
 	padding: 0 20px;
 	transition: .3s;
@@ -35,7 +30,7 @@
 
 	&__container {
 		padding: 25px 0 24px;
-		max-width: 1250px;
+		max-width: 1330px;
 		margin: 0 auto;
 		@media (max-width: 1024px) {
             padding: 23px 0 23px;

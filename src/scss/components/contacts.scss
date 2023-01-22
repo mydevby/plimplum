@@ -3,15 +3,15 @@
     overflow: hidden;
 
     &__container {
-        padding: 125px 0 92px;
+        padding: 42px 0 92px;
         max-width: 1140px;
         margin: 0 auto;
 
         @media (max-width: 1024px) {
-            padding: 121px 0 92px;
+            padding: 37px 0 92px;
         }
         @media (max-width: 768px) {
-            padding: 113px 0 92px;
+            padding: 30px 0 92px;
         }
     }
 

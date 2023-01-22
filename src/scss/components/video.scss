@@ -12,7 +12,7 @@
 
     &__container {
         padding-bottom: 64px;
-        max-width: 1150px;
+        max-width: 1154px;
         margin: 0 auto;
     }
 
@@ -23,7 +23,7 @@
 
     &__wrapper {
 		display: grid;
-		grid-template-columns: 1.1fr 1fr;
+		grid-template-columns: 1.23fr 1fr;
 		align-items: center;
         margin-bottom: 47px;
         position: relative;
@@ -63,7 +63,6 @@
     }
 
     &__block {
-        padding-left: 44px;
         height: 100%;
     }
 
@@ -74,6 +73,7 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
+        border-radius: 15px;
 
         &--1 {
             background-image: url("../img/video/video-poster-big-1.min.jpg");
@@ -161,7 +161,7 @@
         display: flex;
         flex-direction: column;
         background: #FAFAFA;
-        height: 400px;
+        height: 317.75px;
         width: 100%;
     }
 
