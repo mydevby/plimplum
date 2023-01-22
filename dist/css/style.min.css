@@ -882,6 +882,17 @@ main {
   background: url("../img/video/video-crown-x2.min.png") no-repeat 50% 50%/contain;
   transition: 2s;
 }
+@media (max-width: 1024px) {
+  .video__decoration-crown {
+    transform: scale(0.75);
+  }
+}
+@media (max-width: 768px) {
+  .video__decoration-crown {
+    top: -100px;
+    transform: scale(0.6);
+  }
+}
 .video__decoration-crown--start {
   transform: translateX(-1150px);
 }

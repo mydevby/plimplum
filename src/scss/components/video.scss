@@ -148,6 +148,13 @@
         left: -100px;
         background: url("../img/video/video-crown-x2.min.png") no-repeat 50% 50% /contain;
         transition: 2s;
+        @media (max-width: 1024px) {
+			transform: scale(.75);
+		}
+        @media (max-width: 768px) {
+            top: -100px;
+			transform: scale(.6);
+		}
 
         &--start {
             transform: translateX(-1150px)
