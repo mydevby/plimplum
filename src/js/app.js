@@ -23,9 +23,17 @@ window.onload = function() {
 			item.addEventListener('click', function(e) {
 				let videoItemsActive = document.querySelector('.video__item--active');
 				let videoName  = document.querySelector('.video__name');
+				let videoPoster  = document.querySelector('.video__main-video-wrapper');
 				let name = item.dataset.name;
+				let posterIndex = item.dataset.poster;
 				videoItemsActive.classList.remove('video__item--active');
 				item.classList.add('video__item--active');
+				let classes = videoPoster.className.split(' ').filter(function(e) {
+					return e.lastIndexOf('video__main-video-wrapper--', 0) !== 0;
+				});
+				videoPoster.className = classes.join(" ").trim();
+				let newPosterClass = 'video__main-video-wrapper--' + posterIndex;
+				videoPoster.classList.add(newPosterClass);
 				videoName.textContent = name;
 			});
 		});
@@ -73,21 +81,21 @@ window.onload = function() {
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;
 
-		if (document.querySelector('.banner__arrow-2') !== null && document.querySelector('.banner__arrow-2--hidden') !== null) {
-			if (pageYOffset > 10) {
-				document.querySelector('.banner__arrow-2').classList.remove('banner__arrow-2--hidden'); 
-			} else {
+		if (pageYOffset > 10) {
+			if (document.querySelector('.banner__arrow-2') !== null) {
+				document.querySelector('.banner__arrow-2').classList.remove('banner__arrow-2--hidden');
+			};
+			if (document.querySelector('.video__decoration-crown')) {
+				document.querySelector('.video__decoration-crown').classList.remove('video__decoration-crown--start');
+			};
+		} else {
+			if (document.querySelector('.banner__arrow-2') !== null) {
 				document.querySelector('.banner__arrow-2').classList.add('banner__arrow-2--hidden');
-			};
-		};
-
-		if (document.querySelector('.video__decoration-crown') !== null && document.querySelector('.video__decoration-crown--start') !== null) {
-			if (pageYOffset > 50) {
-				document.querySelector('.video__decoration-crown').classList.remove('video__decoration-crown--start'); 
-			} else {
+			}
+			if (document.querySelector('.banner__arrow-2') !== null) {
 				document.querySelector('.video__decoration-crown').classList.add('video__decoration-crown--start');
-			};
-		};
+			}
+		}
     };
 
 	document.querySelectorAll('a[href^="#"').forEach(link => {
@@ -104,5 +112,7 @@ window.onload = function() {
 				behavior: 'smooth'
 			});
 		});
-	});	
+	});
+
+	var video1 = document.querySelector(".video1");
 };

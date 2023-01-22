@@ -69,8 +69,9 @@
 		</div>
 	</div>
 </header>
-<main class="home-page" data-scroll-container>
-	<section class="banner" data-scroll-section>
+<main class="home-page">
+
+	<section class="banner">
 		<div class="banner__container">
 			<div class="banner__wrapper">
 				<div class="banner__video-block banner__video-block--1">
@@ -96,10 +97,10 @@
 					</div>
 				</div>
 				<div class="banner__content">
-					<h1 class="banner__title title title--level-1" data-scroll data-scroll-speed="1">
+					<h1 class="banner__title title title--level-1">
 						Comprehensive sexuality education
 					</h1>
-					<ul class="banner__list" data-scroll data-scroll-speed="1.25">
+					<ul class="banner__list"">
 						<li class="banner__item">
 							<strong class="banner__item--strong">Platform</strong> from psychologists and doctors 
 							for wellness, gender equality, and reproductive health							
@@ -108,7 +109,7 @@
 							<strong class="banner__item--strong">Online courses with answers the questions</strong> about yourself, your body and your pleasure only <strong class="banner__item--strong">fo $25/per month</strong>
 						</li>
 					</ul>
-					<div class="banner__enjoy" data-scroll data-scroll-speed="1.5">
+					<div class="banner__enjoy">
 						<p class="banner__enjoy-text">Enjoy <strong class="banner__enjoy-text--strong">unlimited</strong> courses</p>
 						<a class="banner__enjoy-btn btn btn--dark btn--middle" href="#">Enjoy now</a>
 						<div class="banner__arrow"></div>
@@ -118,6 +119,7 @@
 			</div>
 		</div>			
 	</section>
+
 	<section class="video">
 		<div class="video__anchor" id="course"></div>
 		<div class="video__container">
@@ -126,12 +128,12 @@
 			</h2>
 			<div class="video__wrapper">
 				<div class="video__block">
-					<div class="video__poster-wrapper">
+					<div class="video__main-video-wrapper video__main-video-wrapper--1">
 						<div class="video__decoration-crown video__decoration-crown--start"></div>
-						<picture class="video__poster">
-							<source srcset="img/video/video-poster-big-1.min.webp">
-							<img class="video__poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-						</picture>
+						<!-- <video  class="video__main-video" poster="img/video/video-poster-big-1.min.jpg">
+							<source src="files/video/test.mp4" type="video/mp4">
+							<source src="files/video/test.ogg" type="video/ogg">
+						</video> -->
 						<img class="video__play" src="img/svg/play-icon.svg" alt="Play" title="Play">
 						<h3  class="video__name">Yoni's pleasure</h3>
 						<div class="video__decoration-text"></div>
@@ -141,32 +143,35 @@
 					<button class="video__prev js--video__prev">Prev</button>
 					<div class="video__list js--video__list swiper">
 						<div class="swiper-wrapper">
-							<div class="video__item video__item--active swiper-slide" data-name="Yoni's pleasure">
-								<picture class="video__item-poster">
-									<source srcset="img/video/video-poster-big-1.min.webp">
-									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-								</picture>
+							<div class="video__item video__item--active swiper-slide" data-name="Yoni's pleasure" data-poster="1">
+								<img class="video__item-poster" src="img/video/video-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">Yoni's pleasure</p>
 							</div>
-							<div class="video__item video__item swiper-slide" data-name="Am I Okay? All about fetishes">
-								<picture class="video__item-poster">
-									<source srcset="img/video/video-poster-big-1.min.webp">
-									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-								</picture>
+							<div class="video__item video__item swiper-slide" data-name="Am I Okay? All about fetishes" data-poster="2">
+								<img class="video__item-poster" src="img/video/video-poster-big-2.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">Am I Okay? All about fetishes</p>
 							</div>
-							<div class="video__item video__item swiper-slide" data-name="All about consent culture">
-								<picture class="video__item-poster">
-									<source srcset="img/video/video-poster-big-1.min.webp">
-									<img class="video__item-poster" src="img/video/video-poster-big-1.min.png" alt="Title" title="Title">
-								</picture>
+							<div class="video__item video__item swiper-slide" data-name="All about consent culture" data-poster="3">
+								<img class="video__item-poster" src="img/video/video-poster-big-3.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">All about consent culture</p>
+							</div>
+							<div class="video__item video__item swiper-slide" data-name="All about consent culture!" data-poster="4">
+								<img class="video__item-poster" src="img/video/video-poster-big-4.min.jpg" alt="Title" title="Title">
+								<p class="video__item-name">All about consent culture!</p>
+							</div>
+							<div class="video__item video__item swiper-slide" data-name="All about consent culture!!" data-poster="5">
+								<img class="video__item-poster" src="img/video/video-poster-big-5.min.jpg" alt="Title" title="Title">
+								<p class="video__item-name">All about consent culture!!</p>
 							</div>
 						</div>
 					</div>
 					<button class="video__next js--video__next">Next</button>
 				</div>
-				<div class="video__popcorn"></div>
+				<div class="video__popcorn">
+					<div class="video__popcorn-inner video__popcorn-inner--1"></div>
+					<div class="video__popcorn-inner video__popcorn-inner--2"></div>
+					<div class="video__popcorn-inner video__popcorn-inner--3"></div>
+				</div>
 			</div>
 			<div class="video__btn-wrapper">
 				<a class="video__btn btn btn--middle btn--dark" href="#">
@@ -175,6 +180,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="mission">
 		<div class="mission__anchor" id="mission"></div>
 		<div class="container">
