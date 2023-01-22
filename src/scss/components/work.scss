@@ -1,14 +1,24 @@
 .work {
-	padding: 0 120px;
+	padding: 0 20px;
 	overflow: hidden;
+
+	@media (max-width: 768px) {
+		padding: 0;
+	}
 	
 	&__container {
-		padding: 72px 20px 110px;
+		padding: 17px 0 110px;
 		background: rgb(180, 206, 197, .1);
 		position: relative;
 		border-radius: 40px;
 		max-width: 1280px;
 		margin: 0 auto;
+		@media (max-width: 1024px) {
+			padding: 22px 0 85px;
+		}
+		@media (max-width: 768px) {
+			padding: 34px 20px 65px;
+		}
 
 		&:before {
 			content: "";
@@ -19,19 +29,33 @@
 			height: 180px;
 			background: url("../img/work-decor-x2.min.png") no-repeat 50% 50% /contain;
 			animation: camera 5s infinite alternate ease-in;
+
+			@media (max-width: 768px) {
+				display: none;
+			}
 		}
 	}
     
     &__title {
         text-align: center;
         margin-bottom: 95px;
+		@media (max-width: 1024px) {
+			margin-bottom: 85px;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 70px;
+		}
     }
 
     &__wrapper {
-		max-width: 390px;
+		max-width: 100%;
+		width: 390px;
         height: 220px;
         margin: 0 auto;
         position: relative;
+		@media (max-width: 768px) {
+			width: 330px;
+		}
     }
 
     &__card {
@@ -41,11 +65,12 @@
         left: 0;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		background-size: contain;
+		background-size: cover;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		transition: .3s;
+		max-width: 100%;
 
 		&:hover {
 			z-index: 4;
@@ -64,8 +89,9 @@
 			bottom: 0;
 			background-repeat: no-repeat;
 			background-position: 50% 50%;
-			background-size: contain;
+			background-size: 100% 100%;
 			pointer-events: none;
+			border-radius: 10px;
 		}
 
 		&:after {
@@ -116,6 +142,11 @@
 			&:after {
 				content: "02-03";
 			}
+
+			@media (max-width: 768px) {
+				left: 0;
+				right: auto;
+			}
         }
 
 		&--3 {
@@ -130,6 +161,10 @@
 			}
 			&:after {
 				content: "03-03";
+			}
+			@media (max-width: 768px) {
+				left: 0;
+				right: auto;
 			}
         }
     }
