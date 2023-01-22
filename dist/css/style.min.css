@@ -172,6 +172,10 @@ main {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "YoungSerif-Regular";
   font-style: normal;
@@ -219,6 +223,7 @@ main {
   background: #ecefee;
   padding: 0 20px;
   transition: 0.3s;
+  position: relative;
 }
 .header__mob-menu {
   position: absolute;
@@ -232,6 +237,7 @@ main {
   align-items: center;
   transform: translateX(110%);
   transition: 0.3s;
+  z-index: 2;
 }
 @media (max-width: 1024px) {
   .header__mob-menu {
@@ -433,11 +439,27 @@ main {
   max-width: 1270px;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .banner__container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .banner__container {
+    max-width: 600px;
+    padding: 37px 0 54px;
+  }
+}
 .banner__wrapper {
   display: grid;
   grid-template-columns: 1.23fr 1fr;
   align-items: center;
   position: relative;
+}
+@media (max-width: 1024px) {
+  .banner__wrapper {
+    grid-template-columns: 11fr;
+  }
 }
 .banner__video-block {
   position: relative;
@@ -445,6 +467,16 @@ main {
   padding-bottom: 62%;
   border-radius: 15px;
   background-color: #120F1C;
+}
+@media (max-width: 1024px) {
+  .banner__video-block {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .banner__video-block {
+    margin-bottom: 15px;
+  }
 }
 .banner__play {
   position: absolute;
@@ -489,6 +521,16 @@ main {
   display: flex;
   overflow: hidden;
   padding: 20px 0 20px 9px;
+}
+@media (max-width: 768px) {
+  .banner__slider {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .banner__slider {
+    width: 100px;
+  }
 }
 .banner__white {
   position: absolute;
@@ -550,17 +592,50 @@ main {
   padding-left: 50px;
   position: relative;
 }
+@media (max-width: 1024px) {
+  .banner__content {
+    padding-left: 0px;
+  }
+}
 .banner__title {
   margin-bottom: 24px;
 }
+.banner__title--desk {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .banner__title--desk {
+    display: none;
+  }
+}
+.banner__title--mob {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .banner__title--mob {
+    display: block;
+    text-align: center;
+  }
+}
 .banner__list {
   margin-bottom: 42px;
+}
+@media (max-width: 768px) {
+  .banner__list {
+    margin-bottom: 30px;
+  }
 }
 .banner__item {
   padding-left: 30px;
   margin-bottom: 9px;
   font-weight: 300;
   position: relative;
+  font-size: 17px;
+}
+@media (max-width: 768px) {
+  .banner__item {
+    font-size: 14px;
+  }
 }
 .banner__item:last-child {
   margin-bottom: 0;
@@ -592,12 +667,22 @@ main {
   padding: 11px 31px 15px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .banner__enjoy {
+    padding: 11px;
+  }
+}
 .banner__arrow {
   position: absolute;
   width: 196px;
   height: 115px;
   right: -200px;
   bottom: -120px;
+}
+@media (max-width: 768px) {
+  .banner__arrow {
+    display: none;
+  }
 }
 .banner__arrow:before {
   content: "";
@@ -670,6 +755,12 @@ main {
   max-width: 1154px;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .video__container {
+    max-width: 100%;
+    width: 600px;
+  }
+}
 .video__title {
   text-align: center;
   margin-bottom: 45px;
@@ -680,6 +771,11 @@ main {
   align-items: center;
   margin-bottom: 47px;
   position: relative;
+}
+@media (max-width: 1024px) {
+  .video__wrapper {
+    grid-template-columns: 11fr;
+  }
 }
 .video__popcorn {
   position: absolute;
@@ -918,7 +1014,7 @@ main {
 }
 @media (max-width: 1024px) {
   .mission__img-wrapper {
-    max-width: 320px;
+    max-width: 180px;
     margin: 0 auto;
     grid-row-start: 1;
   }

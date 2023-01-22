@@ -13,7 +13,9 @@ window.onload = function() {
 		let mobMenuBtn  = document.querySelector('.header__burger');
 		mobMenuBtn.addEventListener('click', function(e) {
 			document.querySelector('.header__mob-menu').classList.toggle('header__mob-menu--open');
-			document.querySelector('.header__burger').classList.toggle('header__burger--open')
+			document.querySelector('.header__burger').classList.toggle('header__burger--open');
+			document.querySelector('html').classList.toggle('no-scroll');
+			document.querySelector('body').classList.toggle('no-scroll');
 		});
 	};
 

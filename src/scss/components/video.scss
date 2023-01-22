@@ -14,6 +14,10 @@
         padding-bottom: 64px;
         max-width: 1154px;
         margin: 0 auto;
+        @media (max-width: 1024px) {
+            max-width: 100%;
+			width: 600px;
+		}
     }
 
     &__title {
@@ -27,6 +31,9 @@
 		align-items: center;
         margin-bottom: 47px;
         position: relative;
+        @media (max-width: 1024px) {
+			grid-template-columns: 11fr;
+		}
 	}
 
     &__popcorn {
