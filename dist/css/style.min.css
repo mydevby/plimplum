@@ -490,6 +490,28 @@ main {
   overflow: hidden;
   padding: 20px 0 20px 9px;
 }
+.banner__white {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.85);
+  filter: blur(10px);
+  z-index: 2;
+  cursor: default;
+}
+.banner__slider-arrow {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: url("../img/video/banner-slider-arrow.svg") no-repeat 50% 50%/contain;
+  cursor: pointer;
+}
 .banner__video-item {
   width: 130px;
   min-width: 130px;

@@ -39,6 +39,7 @@ window.onload = function() {
 
 	if (document.querySelectorAll('.banner__video-item') !== null) {
 		let videoItems  = document.querySelectorAll('.banner__video-item');
+		console.log('work!');
 		videoItems.forEach(item => {
 			item.addEventListener('click', function(e) {
 				let videoItemsActive = document.querySelector('.banner__video-item--active');
@@ -126,6 +127,9 @@ window.onload = function() {
 			slidesPerView: "auto",
 			loop: true,
 			spaceBetween: 10,
+			navigation: {
+				nextEl: '.js--banner__prev',
+			},
 		});
 	};
 
