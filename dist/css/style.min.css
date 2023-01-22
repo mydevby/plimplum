@@ -176,6 +176,22 @@ main {
   overflow: hidden;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #FFFFFF url(../img/svg/next-icon.svg) no-repeat 50% 50%;
+  background-size: 50% 50%;
+  transition: 0.3s;
+  z-index: 2;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  border: 2px solid #76C1A7;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "YoungSerif-Regular";
   font-style: normal;
@@ -1664,7 +1680,7 @@ main {
   background: #F7FAF9;
 }
 .footer__container {
-  padding: 37px 0 30px;
+  padding: 37px 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 55px;

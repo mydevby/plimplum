@@ -41,7 +41,6 @@ window.onload = function() {
 
 	if (document.querySelectorAll('.banner__video-item') !== null) {
 		let videoItems  = document.querySelectorAll('.banner__video-item');
-		console.log('work!');
 		videoItems.forEach(item => {
 			item.addEventListener('click', function(e) {
 				let videoItemsActive = document.querySelector('.banner__video-item--active');
@@ -167,7 +166,26 @@ window.onload = function() {
 				document.querySelector('.video__decoration-crown').classList.add('video__decoration-crown--start');
 			}
 		}
+
+		if (document.querySelector('.scroll-top') !== null) {
+			if (pageYOffset > 200) {
+				document.querySelector('.scroll-top').classList.remove('visually-hidden');
+			} else {
+				document.querySelector('.scroll-top').classList.add('visually-hidden');
+			}
+		}
     };
+
+	if (document.querySelector('.scroll-top') !== null) {
+		let scrollTop = document.querySelector('.scroll-top');
+		scrollTop.addEventListener('click', function(e) {
+			const pageHeight = document.documentElement.scrollHeight;
+			window.scrollBy({
+				top: -pageHeight,
+				behavior: 'smooth'
+			});
+		});
+	};
 
 	document.querySelectorAll('a[href^="#"').forEach(link => {
 		link.addEventListener('click', function(e) {
@@ -182,6 +200,4 @@ window.onload = function() {
 			});
 		});
 	});
-
-	var video1 = document.querySelector(".video1");
 };
