@@ -75,24 +75,28 @@
 		<div class="banner__container">
 			<div class="banner__wrapper">
 				<div class="banner__video-block banner__video-block--1">
-					<img class="banner__banner-play" src="img/svg/play-icon.svg" alt="Play" title="Play">
-					<picture class="banner__video-decor-1">
-						<source srcset="img/video/banner-video-decoration-1-x2.min.webp">
-						<img class="banner__video-decor-1" src="img/video/banner-video-decoration-1-x2.min.png" alt="Title" title="Title">
-					</picture>				
-					<picture class="banner__video-img-main">
-						<source srcset="img/video/banner-video-bg-1-x2.min.webp">
-						<img class="banner__video-img-main" src="img/video/banner-video-bg-1-x2.min.png" alt="Title" title="Title">
-					</picture>
-					<picture class="banner__video-decor-2">
-						<source srcset="img/video/banner-video-decoration-2-x2.min.webp">
-						<img class="banner__video-decor-2" src="img/video/banner-video-decoration-2-x2.min.png" alt="Title" title="Title">
-					</picture>
+					<img class="banner__play" src="img/svg/play-icon.svg" alt="Play video">
+					<div class="banner__pause"></div>
+					<video class="banner__main-video banner__main-video--1" poster="img/video/banner-poster-big-1.min.jpg">
+						<source src="files/video/test.mp4" type="video/mp4">
+					</video>				
+					<video class="banner__main-video banner__main-video--2 visually-hidden" preload="none" poster="img/video/banner-poster-big-2.min.jpg">
+						<source src="files/video/test.mp4" type="video/mp4">
+					</video>
+					<video class="banner__main-video banner__main-video--3 visually-hidden" preload="none" poster="img/video/banner-poster-big-3.min.jpg">
+						<source src="files/video/test.mp4" type="video/mp4">
+					</video>
 					<div class="banner__slider js--banner__slider swiper">
 						<div class="swiper-wrapper">
-							<img class="banner__slide swiper-slide" src="img/video/banner-video-small-1-x2.min.png" alt="Title" title="Title">
-							<img class="banner__slide swiper-slide" src="img/video/banner-video-small-2-x2.min.png" alt="Title" title="Title">
-							<img class="banner__slide swiper-slide" src="img/video/banner-video-small-1-x2.min.png" alt="Title" title="Title">
+							<div class="banner__video-item banner__video-item--active swiper-slide" data-index="1">
+								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-1.min.jpg" data-index="1">
+							</div>
+							<div class="banner__video-item swiper-slide" data-index="2">
+								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-2.min.jpg" data-index="1">
+							</div>
+							<div class="banner__video-item swiper-slide" data-index="3">
+								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-3.min.jpg" data-index="1">
+							</div>
 						</div>	
 					</div>
 				</div>
@@ -133,16 +137,16 @@
 						<video class="video__main-video video__main-video--1" poster="img/video/video-poster-big-1.min.jpg">
 							<source src="files/video/test.mp4" type="video/mp4">
 						</video>
-						<video  class="video__main-video video__main-video--2 visually-hidden" poster="img/video/video-poster-big-2.min.jpg">
+						<video  class="video__main-video video__main-video--2 visually-hidden" preload="none" poster="img/video/video-poster-big-2.min.jpg">
 							<source src="files/video/test.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--3 visually-hidden" poster="img/video/video-poster-big-3.min.jpg">
+						<video class="video__main-video video__main-video--3 visually-hidden" preload="none" poster="img/video/video-poster-big-3.min.jpg">
 							<source src="files/video/test.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--4 visually-hidden" poster="img/video/video-poster-big-4.min.jpg">
+						<video class="video__main-video video__main-video--4 visually-hidden" preload="none" poster="img/video/video-poster-big-4.min.jpg">
 							<source src="files/video/test.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--5 visually-hidden" poster="img/video/video-poster-big-5.min.jpg">
+						<video class="video__main-video video__main-video--5 visually-hidden" preload="none" poster="img/video/video-poster-big-5.min.jpg">
 							<source src="files/video/test.mp4" type="video/mp4">
 						</video>
 						<img class="video__play" src="img/svg/play-icon.svg" alt="Play video">

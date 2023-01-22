@@ -17,6 +17,52 @@ window.onload = function() {
 		});
 	};
 
+	/*start section banner*/
+
+	if (document.querySelectorAll('.banner__play') !== null && document.querySelectorAll('.banner__pause') !== null) {
+		document.querySelector('.banner__play').addEventListener('click', function() {
+			this.classList.add('banner__play--hidden');
+			let index = document.querySelector('.banner__video-item--active').dataset.index;
+			document.querySelector('.banner__main-video--' + index).play();
+			document.querySelector('.banner__pause').classList.add('banner__pause--active');
+		});
+
+		document.querySelector('.banner__pause').addEventListener('click', function() {
+			let videoArr = document.querySelectorAll('.banner__main-video');
+			videoArr.forEach(itemVideo => {
+				itemVideo.pause();
+			});
+			document.querySelector('.banner__pause').classList.remove('banner__pause--active');
+			document.querySelector('.banner__play').classList.remove('banner__play--hidden');
+		});
+	};
+
+	if (document.querySelectorAll('.banner__video-item') !== null) {
+		let videoItems  = document.querySelectorAll('.banner__video-item');
+		videoItems.forEach(item => {
+			item.addEventListener('click', function(e) {
+				let videoItemsActive = document.querySelector('.banner__video-item--active');
+				let index = item.dataset.index;
+				videoItemsActive.classList.remove('banner__video-item--active');
+				item.classList.add('banner__video-item--active');
+				let videoArr = document.querySelectorAll('.banner__main-video');
+				videoArr.forEach(itemVideo => {
+					itemVideo.classList.add('visually-hidden');
+					itemVideo.pause();
+				});
+				let activeVideo = document.querySelector('.banner__main-video--' + index);
+				activeVideo.classList.remove('visually-hidden');
+				activeVideo.play();
+				document.querySelector('.banner__play').classList.add('banner__play--hidden');
+				document.querySelector('.banner__pause').classList.add('banner__pause--active');
+			});
+		});
+	};
+
+	/*end section banner */
+
+	/*start section video*/
+
 	if (document.querySelectorAll('.video__play') !== null && document.querySelectorAll('.video__pause') !== null) {
 		document.querySelector('.video__play').addEventListener('click', function() {
 			this.classList.add('video__play--hidden');
@@ -45,8 +91,6 @@ window.onload = function() {
 				let index = item.dataset.index;
 				videoItemsActive.classList.remove('video__item--active');
 				item.classList.add('video__item--active');
-
-				/* show active video */
 				let videoArr = document.querySelectorAll('.video__main-video');
 				videoArr.forEach(itemVideo => {
 					itemVideo.classList.add('visually-hidden');
@@ -55,14 +99,14 @@ window.onload = function() {
 				let activeVideo = document.querySelector('.video__main-video--' + index);
 				activeVideo.classList.remove('visually-hidden');
 				activeVideo.play();
-				/* show active btn play */
 				document.querySelector('.video__play').classList.add('video__play--hidden');
 				document.querySelector('.video__pause').classList.add('video__pause--active');
-				/* show active name video */
 				videoName.textContent = name;
 			});
 		});
 	};
+
+	/*end section video */
 
 	if (document.querySelector('.faq-answers__item') !== null) {
 		let faqItems = document.querySelectorAll('.faq-answers__item');
@@ -77,6 +121,14 @@ window.onload = function() {
 		});
 	};
 
+	if (document.querySelector('.js--banner__slider') !== null) {
+		const swiper1 = new Swiper('.js--banner__slider', {
+			slidesPerView: "auto",
+			loop: true,
+			spaceBetween: 10,
+		});
+	};
+
 	if (document.querySelector('.js--video__list') !== null) {
 		const swiper2 = new Swiper('.js--video__list', {
 			direction: 'vertical',
@@ -88,18 +140,6 @@ window.onload = function() {
 			scrollbar: {
 				el: '.swiper-scrollbar',
 			},
-		});
-	};
-
-	if (document.querySelector('.js--video__list') !== null) {
-		const swiper1 = new Swiper('.js--banner__slider', {
-			slidesPerView: "auto",
-			loop: true,
-			spaceBetween: 10,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
-			  },
 		});
 	};
 

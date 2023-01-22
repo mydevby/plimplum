@@ -23,7 +23,7 @@
 		background-color: $clr-black;
 	}
 
-	&__banner-play {
+	&__play {
         position: absolute;
         top: 12px;
         left: 32px;
@@ -33,17 +33,35 @@
 		z-index: 2;
 		cursor: pointer;
 		&:hover {
-			.video__banner-play {
-				transform: scale(1.05);
-			}
+			transform: scale(1.05);
 		}
+
+		&--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+	&__pause {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        pointer-events: none;
+
+        &--active {
+            pointer-events: auto;
+			z-index: 2;
+        }
     }
 
 	&__slider {
 		position: absolute;
-		z-index: 2;
+		z-index: 3;
 		width: 340px;
-		height: 143px;
+		height: 120px;
 		right: 0;
 		bottom: 16px;
 		background: rgba(255, 255, 255, 0.5);
@@ -51,12 +69,12 @@
 		border-radius: 15px 0 0 15px;
 		display: flex;
 		overflow: hidden;
-		padding: 16px 0 16px 16px;
+		padding: 20px 0 20px 9px;
 	}
 
-	&__slide {
-		width: 120px;
-		min-width: 120px;
+	&__video-item {
+		width: 130px;
+		min-width: 130px;
 		height: auto;
 		flex-shrink: 0;
 		cursor: pointer;
@@ -82,7 +100,7 @@
 		pointer-events: none;
 	}
 
-	&__video-img-main {
+	&__main-video {
 		position: absolute;
 		top: 0;
 		left: 0;
