@@ -679,25 +679,7 @@ main {
   height: 100%;
   position: relative;
   background-color: #120F1C;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
   border-radius: 15px;
-}
-.video__main-video-wrapper--1 {
-  background-image: url("../img/video/video-poster-big-1.min.jpg");
-}
-.video__main-video-wrapper--2 {
-  background-image: url("../img/video/video-poster-big-2.min.jpg");
-}
-.video__main-video-wrapper--3 {
-  background-image: url("../img/video/video-poster-big-3.min.jpg");
-}
-.video__main-video-wrapper--4 {
-  background-image: url("../img/video/video-poster-big-4.min.jpg");
-}
-.video__main-video-wrapper--5 {
-  background-image: url("../img/video/video-poster-big-5.min.jpg");
 }
 .video__main-video {
   width: 100%;
@@ -713,11 +695,27 @@ main {
   width: 76px;
   height: 76px;
   transform: translate(-50%, -50%);
-  transition: 0.3s;
+  transition: 0.5s;
   cursor: pointer;
 }
 .video__play:hover {
   transform: translate(-50%, -50%) scale(1.05);
+}
+.video__play--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.video__pause {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: none;
+}
+.video__pause--active {
+  pointer-events: auto;
 }
 .video__decoration-text {
   position: absolute;
@@ -760,7 +758,7 @@ main {
   display: flex;
   flex-direction: column;
   background: #FAFAFA;
-  height: 317.75px;
+  height: 317px;
   width: 100%;
 }
 .video__item {

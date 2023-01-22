@@ -70,26 +70,7 @@
         height: 100%;
         position: relative;
         background-color: $clr-black;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
         border-radius: 15px;
-
-        &--1 {
-            background-image: url("../img/video/video-poster-big-1.min.jpg");
-        }
-        &--2 {
-            background-image: url("../img/video/video-poster-big-2.min.jpg");
-        }
-        &--3 {
-            background-image: url("../img/video/video-poster-big-3.min.jpg");
-        }
-        &--4 {
-            background-image: url("../img/video/video-poster-big-4.min.jpg");
-        }
-        &--5 {
-            background-image: url("../img/video/video-poster-big-5.min.jpg");
-        }
     }
 
     &__main-video {
@@ -107,11 +88,30 @@
         width: 76px;
         height: 76px;
         transform: translate(-50%, -50%);
-        transition: .3s;
+        transition: .5s;
         cursor: pointer;
 
         &:hover {
             transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        &--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__pause {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        pointer-events: none;
+
+        &--active {
+            pointer-events: auto;
         }
     }
 
@@ -161,7 +161,7 @@
         display: flex;
         flex-direction: column;
         background: #FAFAFA;
-        height: 317.75px;
+        height: 317px;
         width: 100%;
     }
 

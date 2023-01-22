@@ -17,23 +17,48 @@ window.onload = function() {
 		});
 	};
 
+	if (document.querySelectorAll('.video__play') !== null && document.querySelectorAll('.video__pause') !== null) {
+		document.querySelector('.video__play').addEventListener('click', function() {
+			this.classList.add('video__play--hidden');
+			let index = document.querySelector('.video__item--active').dataset.index;
+			document.querySelector('.video__main-video--' + index).play();
+			document.querySelector('.video__pause').classList.add('video__pause--active');
+		});
+
+		document.querySelector('.video__pause').addEventListener('click', function() {
+			let videoArr = document.querySelectorAll('.video__main-video');
+			videoArr.forEach(itemVideo => {
+				itemVideo.pause();
+			});
+			document.querySelector('.video__pause').classList.remove('video__pause--active');
+			document.querySelector('.video__play').classList.remove('video__play--hidden');
+		});
+	};
+
 	if (document.querySelectorAll('.video__item') !== null) {
 		let videoItems  = document.querySelectorAll('.video__item');
 		videoItems.forEach(item => {
 			item.addEventListener('click', function(e) {
 				let videoItemsActive = document.querySelector('.video__item--active');
 				let videoName  = document.querySelector('.video__name');
-				let videoPoster  = document.querySelector('.video__main-video-wrapper');
 				let name = item.dataset.name;
-				let posterIndex = item.dataset.poster;
+				let index = item.dataset.index;
 				videoItemsActive.classList.remove('video__item--active');
 				item.classList.add('video__item--active');
-				let classes = videoPoster.className.split(' ').filter(function(e) {
-					return e.lastIndexOf('video__main-video-wrapper--', 0) !== 0;
+
+				/* show active video */
+				let videoArr = document.querySelectorAll('.video__main-video');
+				videoArr.forEach(itemVideo => {
+					itemVideo.classList.add('visually-hidden');
+					itemVideo.pause();
 				});
-				videoPoster.className = classes.join(" ").trim();
-				let newPosterClass = 'video__main-video-wrapper--' + posterIndex;
-				videoPoster.classList.add(newPosterClass);
+				let activeVideo = document.querySelector('.video__main-video--' + index);
+				activeVideo.classList.remove('visually-hidden');
+				activeVideo.play();
+				/* show active btn play */
+				document.querySelector('.video__play').classList.add('video__play--hidden');
+				document.querySelector('.video__pause').classList.add('video__pause--active');
+				/* show active name video */
 				videoName.textContent = name;
 			});
 		});
