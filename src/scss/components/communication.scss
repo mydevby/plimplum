@@ -6,6 +6,11 @@
 		padding: 60px 0 128px;
 		max-width: 880px;
 		margin: 0 auto;
+		position: relative;
+
+		@media (max-width: 1024px) {
+			padding-bottom: 76px;
+		}
 	}
     &__title {
         max-width: 850px;
@@ -13,11 +18,11 @@
         margin: 0 auto 55px;
 		@media (max-width: 1024px) {
 			max-width: 750px;
-			margin-bottom: 35px;
+			margin-bottom: 16px;
 		}
 		@media (max-width: 768px) {
 			max-width: 500px;
-			margin-bottom: 26px;
+			margin-bottom: 6px;
 		}
     }
 
@@ -40,6 +45,11 @@
 			z-index: 2;
 			background: url("../img/communication-decor-1-x2.min.png") no-repeat 50% 50% /contain;
 			animation: face 5s infinite alternate ease-in;
+
+			@media (max-width: 1024px) {
+				left: -150px;
+				bottom: -260px;
+			}
 		}
 	}
 
@@ -51,6 +61,9 @@
 		height: 154px;
 		background: url("../img/communication-decor-2a-x2.min.png") no-repeat 50% 50% /contain;
 		z-index: 2;
+		@media (max-width: 1024px) {
+            bottom: -400px;
+        }
 		&:before {
 			content: "";
 			position: absolute;
@@ -61,6 +74,7 @@
 			background: url("../img/communication-decor-2b-x2.min.png") no-repeat 50% 50% /contain;
 			animation: heart .3s infinite alternate ease-in;
 		}	
+
 	}
 
     &__list {
@@ -69,13 +83,18 @@
         grid-template-columns: 2.75fr 1.9fr 1.9fr;
         grid-template-rows: repeat(6, minmax(50px, 1fr));
 		@media (max-width: 1024px) {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-		@media (max-width: 768px) {
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(12, minmax(70px, 1fr));
-			gap: 10px 0;
-		}
+            margin-bottom: 20px;
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
     }
 
     &__item {
@@ -210,7 +229,7 @@
 				margin-right: 0;
 				width: 100px;
 				height: 100px;
-				margin-bottom: -5px;
+				margin-bottom: -15px;
 			}
 			@media (max-width: 768px) {
 				width: 74px;
@@ -248,4 +267,86 @@
 		line-height: 1.3;
 		max-width: 350px;
 	}
+
+	&__swiper {
+		position: fixed;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+	    padding: 0;
+        white-space: nowrap;
+
+		@media (max-width: 1024px) {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: inherit;
+            height: auto;
+        }
+	}
+
+	&__swiper-wrapper {
+		padding: 20px 0;
+	}
+
+	&__swiper-slide {
+        width: 217px;
+		max-width: 217px;
+		border-radius: 10px;
+		box-shadow: 0px 4px 25px rgba(29, 32, 31, 0.2);
+		transition: .3s;
+		color: $clr-black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 10px 13px 34px;
+		min-height: 270px;
+		cursor: grab;
+
+		&.swiper-slide-active {
+			background: #93D1BB;
+			color: $clr-white;
+		}
+    }
+
+	.swiper-pagination {
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+        bottom: 50px;
+        display: flex;
+        width: 200px;
+        padding: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		@media(max-width: 1024px) {
+			opacity: 1;
+			height: auto;
+		}		
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: .3;
+        font-size: 0;
+        background: $clr-accent;
+        border-radius: 5px;
+        transition: .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+  
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+		flex-grow: 1;
+    }
 }

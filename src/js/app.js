@@ -168,6 +168,21 @@ window.onload = function() {
 		});
 	};
 
+	if (document.querySelector('.communication__swiper') !== null) {
+		const swiper4 = new Swiper('.communication__swiper', {
+			slidesPerView: "auto",
+			centeredSlides: true,
+			spaceBetween: 18,
+			pagination: {
+				el: ".communication__swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+				  return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
+			  },
+		});
+	};
+
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;
 
