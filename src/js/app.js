@@ -1,5 +1,7 @@
 window.onload = function() {
 
+	new WOW().init();
+
 	if (document.querySelector('[data-scroll-container]') !== null) {
 		const scroll = new LocomotiveScroll({
 			el: document.querySelector('[data-scroll-container]'),
