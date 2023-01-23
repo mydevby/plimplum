@@ -148,6 +148,26 @@ window.onload = function() {
 		});
 	};
 
+	if (document.querySelector('.mission__swiper') !== null) {
+		const swiper3 = new Swiper('.mission__swiper', {
+			slidesPerView: 1,
+			breakpoints: {
+				768: {
+				  slidesPerView: 2,
+				},
+			},
+			autoHeight: true,
+			spaceBetween: 10,
+			pagination: {
+				el: ".mission__swiper-pagination",
+				clickable: true,
+				renderBullet: function (index, className) {
+				  return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
+			  },
+		});
+	};
+
 	window.onscroll = function () {
 		let pageYOffset = window.pageYOffset;
 
