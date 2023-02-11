@@ -116,21 +116,19 @@ window.onload = function() {
 	};
 
 	if (document.querySelector('.js--hello__slider') !== null) {
-		let arrowPrev = document.querySelector('.js--hello__prev');
-		let arrowNext = document.querySelector('.js--hello__next');
-		arrowPrev.style.opacity = 0;
-		const swiper1 = new Swiper('.js--helo__slider', {
-			slidesPerView: 2,
+		const swiper1 = new Swiper('.js--hello__slider', {
+			slidesPerView: "auto",
 			spaceBetween: 10,
 			navigation: {
 				nextEl: '.js--hello__next',
 				prevEl: '.js--hello__prev',
 			},
 		});
+		let arrowPrev = document.getElementsByClassName('js--hello__prev')[0];
+		let arrowNext = document.getElementsByClassName('js--hello__next')[0];
+		arrowPrev.style.opacity = 0;
     	swiper1.on('slideChange', function() {
-			console.lo
-      		let realIndex = swiper1.realIndex;
-			  console.log(realIndex );
+			let realIndex = swiper1.realIndex;
 			if (realIndex == 0) {
 				arrowPrev.style.opacity = 0;
 				arrowNext.style.opacity = 1;
