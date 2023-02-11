@@ -16,6 +16,7 @@
 </head>
 <body>
 <button class="scroll-top visually-hidden"></button>
+
 <header class="header">
 	<div class="header__container">
 		<div class="header__wrapper">
@@ -74,58 +75,69 @@
 </header>
 <main class="home-page">
 
-	<section class="banner">
-		<div class="banner__container">
-			<h1 class="banner__title banner__title--mob title title--level-1 wow fadeInDown" data-wow-duration="1s">
+	<section class="hello">
+		<div class="hello__container">
+			<h1 class="hello__title hello__title--mob title title--level-1 wow fadeInDown" data-wow-duration="1s">
 				Comprehensive sexuality education
 			</h1>
-			<div class="banner__wrapper">
-				<div class="banner__video-block banner__video-block--1 wow fadeInLeft" data-wow-duration="1s">
-					<img class="banner__play" src="img/svg/play-icon.svg" alt="Play video">
-					<div class="banner__pause"></div>
-					<video class="banner__main-video banner__main-video--1" poster="img/video/banner-poster-big-1.min.jpg">
-						<source src="files/video/test.mp4" type="video/mp4">
+			<div class="hello__wrapper">
+				<div class="hello__video-block hello__video-block--1 wow fadeInLeft" data-wow-duration="1s">
+					<picture class="hello__video-block-decoration-1 wow flipInX" data-wow-duration="1s" data-wow-delay="1s">
+						<source srcset="img/video/hello-video-decoration-1-x2.min.webp" type="image/webp">
+						<img src="img/video/hello-video-decoration-1-x2.min.png" alt="Decoration">
+					</picture>	
+					<picture class="hello__video-block-decoration-2 wow flipInX" data-wow-duration="1s" data-wow-delay="1s">
+						<source srcset="img/video/hello-video-decoration-2-x2.min.webp" type="image/webp">
+						<img src="img/video/hello-video-decoration-2-x2.min.png" alt="Decoration">
+					</picture>	
+					<img class="hello__play" src="img/svg/play-icon.svg" alt="Play video">
+					<div class="hello__pause"></div>
+					<video class="hello__main-video hello__main-video--1" poster="img/video/hello-poster-big-1.min.jpg">
+						<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 					</video>				
-					<video class="banner__main-video banner__main-video--2 visually-hidden" preload="none" poster="img/video/banner-poster-big-2.min.jpg">
-						<source src="files/video/test.mp4" type="video/mp4">
+					<video class="hello__main-video hello__main-video--2 visually-hidden" poster="img/video/hello-poster-big-1.min.jpg" preload="none" >
+						<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 					</video>
-					<video class="banner__main-video banner__main-video--3 visually-hidden" preload="none" poster="img/video/banner-poster-big-3.min.jpg">
-						<source src="files/video/test.mp4" type="video/mp4">
+					<video class="hello__main-video hello__main-video--3 visually-hidden" poster="img/video/hello-poster-big-1.min.jpg" preload="none" >
+						<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 					</video>
-					<div class="banner__slider js--banner__slider swiper">
+					<div class="hello__slider js--hello__slider swiper">
 						<div class="swiper-wrapper">
-							<div class="banner__video-item banner__video-item--active swiper-slide" data-index="1">
-								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-1.min.jpg" data-index="1">
+							<div class="hello__video-item hello__video-item--active swiper-slide" data-index="1" title="Play video «Yoni's pleasur»">
+								<img class="hello__video-item-poster" width="130" height="81" src="img/video/hello-poster-big-1.min.jpg" data-index="1">
+								<div class="hello__video-item-name">Yoni's pleasure</div>
 							</div>
-							<div class="banner__video-item swiper-slide" data-index="2">
-								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-2.min.jpg" data-index="1">
+							<div class="hello__video-item swiper-slide" data-index="2">
+								<img class="hello__video-item-poster" width="130" height="81" src="img/video/hello-poster-big-1.min.jpg" data-index="1" title="Play video «Am I Okay? All about fetishes»">
+								<div class="hello__video-item-name">Am I Okay? All about fetishes</div>
 							</div>
-							<div class="banner__video-item swiper-slide" data-index="3">
-								<img class="banner__video-item-poster" width="130" height="81" src="img/video/banner-poster-big-3.min.jpg" data-index="1">
+							<div class="hello__video-item swiper-slide" data-index="3">
+								<img class="hello__video-item-poster" width="130" height="81" src="img/video/hello-poster-big-1.min.jpg" data-index="1" title="Play video «All about consent culture»">
+								<div class="hello__video-item-name">All about consent culture</div>
 							</div>
 						</div>
-						<div class="banner__white"></div>
-						<div class="banner__slider-arrow js--banner__prev"></div>
+						<div class="hello__slider-arrow hello__slider-arrow--prev js--hello__prev"></div>
+						<div class="hello__slider-arrow hello__slider-arrow--next js--hello__next"></div>
 					</div>
 				</div>
-				<div class="banner__content">
-					<h1 class="banner__title banner__title--desk title title--level-1 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+				<div class="hello__content">
+					<h1 class="hello__title hello__title--desk title title--level-1 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
 						Comprehensive sexuality education
 					</h1>
-					<ul class="banner__list">
-						<li class="banner__item wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
-							<strong class="banner__item--strong">Platform</strong> from psychologists and doctors 
+					<ul class="hello__list">
+						<li class="hello__item wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
+							<strong class="hello__item--strong">Platform</strong> from psychologists and doctors 
 							for wellness, gender equality, and reproductive health							
 						</li>
-						<li class="banner__item wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
-							<strong class="banner__item--strong">Online courses with answers the questions</strong> about yourself, your body and your pleasure only <strong class="banner__item--strong">fo $25/per month</strong>
+						<li class="hello__item wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+							<strong class="hello__item--strong">Online courses with answers the questions</strong> about yourself, your body and your pleasure only <strong class="hello__item--strong">fo $25/per month</strong>
 						</li>
 					</ul>
-					<div class="banner__enjoy wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
-						<p class="banner__enjoy-text">Enjoy <strong class="banner__enjoy-text--strong">unlimited</strong> courses</p>
-						<a class="banner__enjoy-btn btn btn--dark btn--middle" href="#">Enjoy now</a>
-						<div class="banner__arrow wow fadeInRight" data-wow-duration="1s" data-wow-delay="2.5s"></div>
-						<div class="banner__arrow-2 banner__arrow-2--hidden"></div>
+					<div class="hello__enjoy wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
+						<p class="hello__enjoy-text">Enjoy <strong class="hello__enjoy-text--strong">unlimited</strong> courses</p>
+						<a class="hello__enjoy-btn btn btn--dark btn--middle" href="#">Enjoy now</a>
+						<div class="hello__arrow wow fadeInRight" data-wow-duration="1s" data-wow-delay="2.5s"></div>
+						<div class="hello__arrow-2 hello__arrow-2--hidden"></div>
 					</div>
 				</div>
 			</div>
@@ -142,20 +154,20 @@
 				<div class="video__block wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
 					<div class="video__main-video-wrapper">
 						<div class="video__decoration-crown video__decoration-crown--start"></div>
-						<video class="video__main-video video__main-video--1" poster="img/video/video-poster-big-1.min.jpg">
-							<source src="files/video/test.mp4" type="video/mp4">
+						<video class="video__main-video video__main-video--1" poster="img/video/hello-poster-big-1.min.jpg">
+							<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 						</video>
-						<video  class="video__main-video video__main-video--2 visually-hidden" preload="none" poster="img/video/video-poster-big-2.min.jpg">
-							<source src="files/video/test.mp4" type="video/mp4">
+						<video  class="video__main-video video__main-video--2 visually-hidden" preload="none" poster="img/video/hello-poster-big-1.min.jpg">
+							<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--3 visually-hidden" preload="none" poster="img/video/video-poster-big-3.min.jpg">
-							<source src="files/video/test.mp4" type="video/mp4">
+						<video class="video__main-video video__main-video--3 visually-hidden" preload="none" poster="img/video/hello-poster-big-1.min.jpg">
+							<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--4 visually-hidden" preload="none" poster="img/video/video-poster-big-4.min.jpg">
-							<source src="files/video/test.mp4" type="video/mp4">
+						<video class="video__main-video video__main-video--4 visually-hidden" preload="none" poster="img/video/hello-poster-big-1.min.jpg">
+							<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 						</video>
-						<video class="video__main-video video__main-video--5 visually-hidden" preload="none" poster="img/video/video-poster-big-5.min.jpg">
-							<source src="files/video/test.mp4" type="video/mp4">
+						<video class="video__main-video video__main-video--5 visually-hidden" preload="none" poster="img/video/hello-poster-big-1.min.jpg">
+							<source src="files/video/plimplum-video-1.mp4" type="video/mp4">
 						</video>
 						<img class="video__play" src="img/svg/play-icon.svg" alt="Play video">
 						<div class="video__pause"></div>
@@ -168,23 +180,23 @@
 					<div class="video__list js--video__list swiper">
 						<div class="swiper-wrapper">
 							<div class="video__item video__item--active swiper-slide wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" data-name="Yoni's pleasure" data-index="1">
-								<img class="video__item-poster" width="124" src="img/video/video-poster-big-1.min.jpg" alt="Title" title="Title">
+								<img class="video__item-poster" width="124" src="img/video/hello-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">Yoni's pleasure</p>
 							</div>
 							<div class="video__item video__item swiper-slide wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s" data-name="Am I Okay? All about fetishes" data-index="2">
-								<img class="video__item-poster" width="124" src="img/video/video-poster-big-2.min.jpg" alt="Title" title="Title">
+								<img class="video__item-poster" width="124" src="img/video/hello-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">Am I Okay? All about fetishes</p>
 							</div>
 							<div class="video__item video__item swiper-slide wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s" data-name="All about consent culture" data-index="3">
-								<img class="video__item-poster" width="124" src="img/video/video-poster-big-3.min.jpg" alt="Title" title="Title">
+								<img class="video__item-poster" width="124" src="img/video/hello-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">All about consent culture</p>
 							</div>
 							<div class="video__item video__item swiper-slide wow fadeInRight" data-wow-duration="1s" data-wow-delay="2.5s" data-name="All about consent culture!" data-index="4">
-								<img class="video__item-poster" width="124" src="img/video/video-poster-big-4.min.jpg" alt="Title" title="Title">
+								<img class="video__item-poster" width="124" src="img/video/hello-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">All about consent culture!</p>
 							</div>
 							<div class="video__item video__item swiper-slide wow fadeInRight" data-wow-duration="1s" data-wow-delay="3s" data-name="All about consent culture!!" data-index="5">
-								<img class="video__item-poster" width="124" src="img/video/video-poster-big-5.min.jpg" alt="Title" title="Title">
+								<img class="video__item-poster" width="124" src="img/video/hello-poster-big-1.min.jpg" alt="Title" title="Title">
 								<p class="video__item-name">All about consent culture!!</p>
 							</div>
 						</div>

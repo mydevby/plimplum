@@ -1,0 +1,382 @@
+.hello {
+	padding: 0 20px;
+	background-color: $clr-white;
+
+	&__container {
+		padding: 37px 0 160px;
+		max-width: 1270px;
+		margin: 0 auto;
+		@media (max-width: 1024px) {
+			max-width: 700px;
+		}
+		@media (max-width: 768px) {
+			max-width: 600px;
+			padding: 37px 0 54px;
+		}
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1.23fr 1fr;
+		align-items: center;
+		position: relative;
+		@media (max-width: 1024px) {
+			grid-template-columns: 11fr;
+		}
+	}
+
+	&__video-block {
+		position: relative;
+		height: 0;
+		padding-bottom: 62%;
+		border-radius: 15px;
+		background-color: $clr-black;
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__play {
+        position: absolute;
+        top: 12px;
+        left: 32px;
+        width: 76px;
+        height: 76px;
+        transition: .3s;
+		z-index: 2;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		&--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+	&__pause {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        pointer-events: none;
+
+        &--active {
+            pointer-events: auto;
+			z-index: 2;
+        }
+    }
+
+	&__slider {
+		position: absolute;
+		z-index: 3;
+		width: 340px;
+		right: 0;
+		bottom: 16px;
+		background: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(7.5px);
+		border-radius: 15px 0 0 15px;
+		display: flex;
+		overflow: hidden;
+		padding: 20px 0 20px 20px;
+		@media (max-width: 768px) {
+			max-width: 240px;
+			padding: 10px 0 10px 9px;
+		}
+		@media (max-width: 480px) {
+			max-width: 220px;
+		}
+	}
+
+	&__slider-arrow {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 25px;
+		height: 100%;
+		transform: translateY(-50%);
+		z-index: 3;
+		cursor: pointer;
+
+		&:before {
+			content: "";
+			position: absolute;			
+			top: 0;
+			bottom: 0;
+			width: 60px;
+			background: rgba(255, 255, 255, 0.55);
+			filter: blur(10px);
+			z-index: -1;
+			pointer-events: none;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: -30px;
+			top: 50%;
+			bottom: 0;
+			width: 25px;
+			height: 25px;
+			transform: translateY(-50%);
+			background: url("../img/video/hello-slider-arrow.svg") no-repeat 50% 50% /contain;
+		}
+
+		&--next {
+			right: 5px;
+			&:before {
+				left: -20px;
+				right: -30px;
+			}
+		}
+
+		&--prev {
+			left: 5px;
+			&:before {
+				right: -20px;
+				left: -30px;
+			}
+
+			&:after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	&__video-item {
+		max-width: 100%;
+		width: 130px;
+		height: auto;
+		flex-shrink: 0;
+		cursor: pointer;
+		border: 5px solid $clr-white;
+		border-radius: 5px;
+		background: $clr-white;
+		position: relative;
+		@media (max-width: 768px) {
+			width: 100px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 7px;
+			left: 7px;
+			background: url("../img/svg/play-icon.svg") no-repeat 50% 50% /contain;
+		}
+	}
+
+	&__video-item-poster {
+		display: inline-block;
+		border-radius: 5px;
+		width: 100%;
+		height: auto;
+	}
+
+	&__video-item-name {
+		font-size: 12px;
+		line-height: 1;
+		font-weight: 600;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-bottom: 2px;
+	}
+
+	&__main-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 15px;
+	}
+
+    &__content {
+		padding-left: 50px;
+		position: relative;
+		@media (max-width: 1024px) {
+			padding-left: 0px;
+		}
+    }
+
+	&__title {
+		margin-bottom: 24px;
+		&--desk {
+			display: block;
+			@media (max-width: 1024px) {
+				display: none;
+			}
+		}
+		&--mob {
+			display: none;
+			@media (max-width: 1024px) {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+    &__list {
+		margin-bottom: 42px;
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__item {
+		padding-left: 30px;
+		margin-bottom: 9px;
+		font-weight: 300;
+		position: relative;
+		font-size: 17px;
+		@media (max-width: 768px) {
+			font-size: 14px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&--strong {
+			font-weight: 600;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			background: url("../img/video/hello-list-icon-x2.min.png") no-repeat 50% 50% /contain;
+		}
+	}
+
+	&__enjoy {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		max-width: 267px;
+		margin: 0 auto;
+		background: rgba(180, 206, 197, 0.1);
+		border: 0.5px solid $clr-accent;
+		box-shadow: 0px 0px 16px rgba(118, 193, 167, 0.4);
+		border-radius: 7px;
+		padding: 11px 31px 15px;
+		position: relative;
+		@media (max-width: 768px) {
+			padding: 11px;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 196px;
+		height: 115px;
+		right: -200px;
+		bottom: -120px;
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("../img/video/hello-video-decor-3b-x2.min.png") no-repeat 50% 50% /contain;
+			animation: arrow 1s infinite alternate ease-in;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("../img/video/hello-video-decor-3a-x2.min.png") no-repeat 50% 50% /contain;
+			animation: heart .3s infinite alternate ease-in;
+		}
+	}
+
+	&__arrow-2 {
+		position: absolute;
+		width: 140px;
+		height: 130px;
+		right: -150px;
+		top: -40px;
+		background: url("../img/video/arrow-2.svg") no-repeat 50% 50% /contain;
+		opacity: 1;
+		transition: .3s;
+
+		&--hidden {
+			opacity: 0;
+		}
+	}
+
+	&__enjoy-text {
+		position: relative;
+		font-size: 14px;
+		margin-bottom: 16px;
+		line-height: 1.56;
+		transform: translateX(-6px);
+
+		&--strong {
+			font-weight: 600;
+		}
+
+		&:before {
+			content: "";
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: -5px;
+			width: 33px;
+			height: 34px;
+			background: url("../img/video/hello-enjoy-icon-x2.min.png") no-repeat 50% 50% /contain;
+			transform: translateY(8px);
+			opacity: .7;
+		}
+	}
+
+	&__video-block-decoration-1 {
+		position: absolute;
+		width: 174px;
+		height: auto;
+		top: -90px;
+		right: -110px;
+		pointer-events: none;
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__video-block-decoration-2 {
+		position: absolute;
+		width: 178px;
+		height: auto;
+		z-index: 2;
+		bottom: -35px;
+		left: -125px;
+		opacity: .5;
+		pointer-events: none;
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}
