@@ -3675,6 +3675,7 @@ main {
 .hello__video-item-name {
   font-size: 12px;
   line-height: 1;
+  font-family: "YoungSerif-Regular", serif;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
